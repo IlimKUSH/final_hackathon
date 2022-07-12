@@ -6,6 +6,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <Header />
+      <Cart />
     </BrowserRouter>
   );
 };
