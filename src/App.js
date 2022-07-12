@@ -1,29 +1,25 @@
 
 import { BrowserRouter } from "react-router-dom";
+import HeaderUp from "./components/Header/HeaderUp";
+import Main from "./components/Main/Main";
+import Routing from "./Routing";
 import "./App.css";
 import ProductsContextProvider from "./contexts/productsContext";
-import Routing from "./Routing";
-import React from "react";
-
-//! Components
-import Header from "./components/Header/Header";
 import CartContextProvider from "./context/cartContext";
 
-//! Pages
 
-import Routing from "./Routing";
+
 
 function App() {
   return (
-  <ProductsContextProvider>
-    <CartContextProvider>
-      <BrowserRouter>
-        <Header />
-        <Routing />
-      </BrowserRouter>
-    </CartContextProvider>
-    </ProductsContextProvider>
-
+<ProductsContextProvider>
+ <CartContextProvider>
+    <BrowserRouter>
+      <HeaderUp />
+      <Routing />
+    </BrowserRouter>
+   </CartContextProvider>
+  </ProductsContextProvider>
   );
 }
 

@@ -4,10 +4,14 @@
   box-sizing: border-box;
   font-family: "ABeeZee", sans-serif;
 }
+body {
+  background: #131218;
+}
 .container {
-  max-width: 1050px;
+  max-width: 1100px;
   margin: 0 auto;
 }
+
 p {
   font-size: 14px;
   line-height: 17px;
@@ -15,4 +19,9 @@ p {
 }
 a {
   text-decoration: none;
+}
+h6 {
+  font-size: 24px;
+  line-height: 28px;
+  color: #ffffff;
 }
