@@ -2,11 +2,9 @@ import React, { useReducer } from "react";
 import axios from "axios";
 
 export const productsContext = React.createContext();
-
 const INIT_STATE = {
   products: [],
   oneProduct: null,
-  pages: 0,
 };
 
 function reducer(state = INIT_STATE, action) {
@@ -15,7 +13,7 @@ function reducer(state = INIT_STATE, action) {
       return {
         ...state,
         products: action.payload.data,
-        pages: Math.ceil(action.payload.headers["x-total-count"] / 2),
+        pages: Math.ceil(action.payload.headers["x-total-count"] / 4),
       };
     case "GET_ONE":
       return { ...state, oneProduct: action.payload };
@@ -24,21 +22,20 @@ function reducer(state = INIT_STATE, action) {
   }
 }
 
-const PRODUCTS_API = "http://localhost:8001/products";
+const PRODUCTS_API = "";
 
 const ProductsContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
 
-  //! Create
+  //!Create
   async function createProduct(newProduct) {
     await axios.post(PRODUCTS_API, newProduct);
     getProducts();
   }
-
-  //! Read
+  //!Read
   async function getProducts() {
-    const res = await axios(`${PRODUCTS_API}/${window.location.search}`);
-    console.log(res);
+    const res = await axios(`${PRODUCTS_API}${window.location.search}`);
+
     dispatch({
       type: "GET_PRODUCTS",
       payload: res,
@@ -51,18 +48,19 @@ const ProductsContextProvider = ({ children }) => {
     getProducts();
   }
 
-  //! Details, Get for edit
+  //! Detail
   async function getOneProduct(id) {
     const res = await axios(`${PRODUCTS_API}/${id}`);
+
     dispatch({
       type: "GET_ONE",
       payload: res.data,
     });
   }
+
   //! Update
   async function updateProduct(id, editedProduct) {
     await axios.patch(`${PRODUCTS_API}/${id}`, editedProduct);
-    getProducts();
   }
 
   return (
@@ -71,9 +69,9 @@ const ProductsContextProvider = ({ children }) => {
         products: state.products,
         oneProduct: state.oneProduct,
         pages: state.pages,
+        deleteProduct,
         createProduct,
         getProducts,
-        deleteProduct,
         getOneProduct,
         updateProduct,
       }}>
@@ -81,5 +79,4 @@ const ProductsContextProvider = ({ children }) => {
     </productsContext.Provider>
   );
 };
-
 export default ProductsContextProvider;

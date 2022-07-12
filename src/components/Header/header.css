@@ -58,3 +58,16 @@
 .nav__content > p {
   margin: 0 5px 0 5px;
 }
+
+.header-down__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-down__logo {
+  width: 167px;
+  height: 154px;
+}
+.nav__content > p {
+  color: #ffffff;
+}
