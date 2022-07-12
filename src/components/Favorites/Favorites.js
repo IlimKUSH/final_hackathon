@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { favContext } from "../../context/favContext";
 import "./Favorites.css";
 
-const Cart = ({ item }) => {
+const Favorites = ({ item }) => {
   const navigate = useNavigate();
 
   const { getFav, fav, deleteFromFav } = useContext(favContext);
@@ -127,4 +127,4 @@ const Cart = ({ item }) => {
   );
 };
 
-export default Cart;
+export default Favorites;
