@@ -1,9 +1,9 @@
 import React from "react";
 import HeaderDown from "../Header/HeaderDown";
 
-import "./testimonials.css";
+import "./catalog.css";
 
-const Testimonials = () => {
+const Catalog = () => {
   return (
     <div>
       <HeaderDown />
@@ -11,4 +11,4 @@ const Testimonials = () => {
   );
 };
 
-export default Testimonials;
+export default Catalog;
