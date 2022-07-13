@@ -1,3 +1,62 @@
 .main {
   background: #131218;
+  display: flex;
+  flex-direction: column;
+  max-width: 461px;
+  width: 100%;
+}
+form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.inp_data {
+  margin-right: 2px;
+  border-radius: 5px;
+  padding-left: 25px;
+  padding-right: 25px;
+  height: 40px;
+  margin-bottom: 9px;
+  font-size: 14px;
+  border: 1px solid #dddddd;
+  color: #666666;
+  background: transparent;
+}
+#number {
+  width: 100%;
+}
+
+.card {
+  box-sizing: border-box;
+  background: #131218;
+  border: 2px solid #ea8305;
+  border-radius: 4px;
+  width: 250px;
+  height: 50px;
+  margin-bottom: 2px;
+  color: ffffff;
+}
+h3 {
+  margin-left: 128px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 35px;
+  font-style: normal;
+  color: ffffff;
+}
+.contact {
+  display: flex;
+  margin-left: 128px;
+  flex-direction: column;
+}
+.text {
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-sizing: border-box;
+  border-radius: 5px;
+  height: 89px;
+  width: 100%;
+  background: none;
+  padding: 14px 25px;
+  font-size: 14px;
 }
