@@ -1,0 +1,5 @@
+.register__content {
+  background-color: #cc7408;
+  display: flex;
+  flex-direction: column;
+}
