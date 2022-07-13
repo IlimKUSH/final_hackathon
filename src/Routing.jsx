@@ -1,5 +1,7 @@
-import React, { useContext } from "react";
-import { Navigate, Route, Routes } from "react-router-dom";
+
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+
 import About from "./components/About/About";
 import AddProduct from "./components/AddProduct/AddProduct";
 import Cart from "./components/Cart/Cart";
@@ -19,9 +21,8 @@ const Routing = () => {
   // const { currentUser } = useContext(authContext);
   return (
     <Routes>
-      <Route path="/" element={<Main />} />
+      <Route path="/favorite" element={<Favorites />} />
       <Route path="/about-us" element={<About />} />
-      <Route path="/cart" element={<Cart />} />
       <Route path="/testimonials" element={<Testimonials />} />
       <Route path="/payment" element={<Payment />} />
       <Route path="/favourites" element={<Favorites />} />
