@@ -2,78 +2,99 @@ import React, { useReducer } from "react";
 import axios from "axios";
 
 export const productsContext = React.createContext();
+
 const INIT_STATE = {
   products: [],
-  oneProduct: null,
+  pages: 0,
+  categories: [],
 };
-
 function reducer(state = INIT_STATE, action) {
   switch (action.type) {
     case "GET_PRODUCTS":
       return {
         ...state,
-        products: action.payload.data,
-        pages: Math.ceil(action.payload.headers["x-total-count"] / 4),
+        products: action.payload.results,
+        pages: Math.ceil(action.payload.count / 5),
       };
-    case "GET_ONE":
-      return { ...state, oneProduct: action.payload };
+    case "GET_CATEGORIES":
+      return { ...state, categories: action.payload };
     default:
       return state;
   }
 }
 
-const PRODUCTS_API = "";
+const API = "https://agile-everglades-65547.herokuapp.com";
 
 const ProductsContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
-
-  //!Create
-  async function createProduct(newProduct) {
-    await axios.post(PRODUCTS_API, newProduct);
-    getProducts();
-  }
-  //!Read
   async function getProducts() {
-    const res = await axios(`${PRODUCTS_API}${window.location.search}`);
+    try {
+      const tokens = JSON.parse(localStorage.getItem("tokens"));
+      // config
+      const Authorization = `Bearer ${tokens.access}`;
+      const config = {
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+          Authorization,
+        },
+      };
+      const res = await axios(`${API}/products/`, config);
 
-    dispatch({
-      type: "GET_PRODUCTS",
-      payload: res,
-    });
+      dispatch({
+        type: "GET_PRODUCTS",
+        payload: res.data,
+      });
+    } catch (err) {
+      console.log(err);
+    }
   }
+  async function createProduct(newProduct, navigate) {
+    const qwer = { key: "qwe" };
 
-  //! Delete
-  async function deleteProduct(id) {
-    await axios.delete(`${PRODUCTS_API}/${id}`);
-    getProducts();
+    try {
+      const tokens = JSON.parse(localStorage.getItem("tokens"));
+      //config
+      const Authorization = `Bearer ${tokens.access}`;
+      // const config = {
+      //   headers: {
+      //     Authorization,
+      //   },
+      // };
+      const res = await axios.post(
+        `${API}/products/`,
+        JSON.stringify(qwer) /*config*/
+      );
+      console.log(res);
+
+      // navigate("/products");
+      getProducts();
+    } catch (err) {
+      console.log(err);
+    }
   }
-
-  //! Detail
-  async function getOneProduct(id) {
-    const res = await axios(`${PRODUCTS_API}/${id}`);
-
-    dispatch({
-      type: "GET_ONE",
-      payload: res.data,
-    });
-  }
-
-  //! Update
-  async function updateProduct(id, editedProduct) {
-    await axios.patch(`${PRODUCTS_API}/${id}`, editedProduct);
-  }
-
+  // async function getCategories() {
+  //   try {
+  //     const tokens = JSON.parse(localStorage.getItem("tokens"));
+  //     //config
+  //     const Authorization = `Bearer ${tokens.access}`;
+  //     const config = {
+  //       headers: {
+  //         Authorization,
+  //       },
+  //     };
+  //     const res = await axios(`${API}/category/list/`, config);
+  //   } catch (err) {
+  //     console.log(err);
+  //   }
+  // }
   return (
     <productsContext.Provider
       value={{
         products: state.products,
-        oneProduct: state.oneProduct,
         pages: state.pages,
-        deleteProduct,
-        createProduct,
+        categories: state.categories,
         getProducts,
-        getOneProduct,
-        updateProduct,
+        createProduct,
       }}>
       {children}
     </productsContext.Provider>

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const RegissterSuccess = () => {
+const RegisterSuccess = () => {
   return (
     <div className="container">
       Вы успешно зарегистрировались! Можете <Link to="/login">войти</Link> в
@@ -10,4 +10,4 @@ const RegissterSuccess = () => {
   );
 };
 
-export default RegissterSuccess;
+export default RegisterSuccess;
