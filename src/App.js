@@ -1,25 +1,21 @@
-import React from "react";
 import { BrowserRouter } from "react-router-dom";
 
-//! Components
-import Header from "./components/Header/Header";
-import CartContextProvider from "./context/cartContext";
-import FavContextProvider from "./context/favContext";
-
-//! Pages
-
+import HeaderUp from "./components/Header/HeaderUp";
 import Routing from "./Routing";
+import "./index.css";
+import ProductsContextProvider from "./contexts/productsContext";
+import CartContextProvider from "./contexts/cartContext";
 
 function App() {
   return (
-    <FavContextProvider>
+    <ProductsContextProvider>
       <CartContextProvider>
         <BrowserRouter>
-          <Header />
+          <HeaderUp />
           <Routing />
         </BrowserRouter>
       </CartContextProvider>
-    </FavContextProvider>
+    </ProductsContextProvider>
   );
 }
 
