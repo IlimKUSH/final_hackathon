@@ -21,6 +21,9 @@ const Routing = () => {
   // const { currentUser } = useContext(authContext);
   return (
     <Routes>
+      <Route path="/" element={<Main />} />
+      <Route path="/cart" element={<Cart />} />
+
       <Route path="/favorite" element={<Favorites />} />
       <Route path="/about-us" element={<About />} />
       <Route path="/testimonials" element={<Testimonials />} />
