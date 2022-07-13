@@ -6,27 +6,39 @@ import Logo from "../../images/logo.png";
 import Search from "../../images/search.svg";
 import Cart from "../../images/cart.svg";
 import Fav from "../../images/fav.svg";
+import { useNavigate } from "react-router-dom";
 
 const HeaderDown = () => {
+  const navigate = useNavigate();
+
   return (
     <header className="header-down">
       <div className="container">
         <div className="header-down__content">
-          <img className="header-down__logo" src={Logo} alt="logo" />
+          <img
+            onClick={() => navigate("/")}
+            className="header-down__logo"
+            src={Logo}
+            alt="logo"
+          />
           <div className="header__search">
             <img src={Search} alt="search" />
             <input placeholder="Поиск" type="text" />
           </div>
           <nav className="header__nav">
             <div className="nav__content">
-              <p>КАТАЛОГ</p>
-              <p>О НАС</p>
-              <p>ОТЗЫВЫ</p>
+              <p onClick={() => navigate("/catalog")}>КАТАЛОГ</p>
+              <p onClick={() => navigate("/about-us")}>О НАС</p>
+              <p onClick={() => navigate("/testimonials")}>ОТЗЫВЫ</p>
             </div>
           </nav>
           <div className="header__ftrs">
-            <img src={Fav} alt="favorites" />
-            <img src={Cart} alt="cart" />
+            <img
+              onClick={() => navigate("/favourites")}
+              src={Fav}
+              alt="favorites"
+            />
+            <img onClick={() => navigate("/cart")} src={Cart} alt="cart" />
           </div>
         </div>
       </div>
