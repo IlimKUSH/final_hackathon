@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./header.css";
 
 import Logo from "../../images/logo.png";
@@ -7,9 +7,11 @@ import Cart from "../../images/cart.svg";
 import Fav from "../../images/fav.svg";
 import Swiper from "../Swiper/Swiper";
 import { useNavigate } from "react-router-dom";
+import { authContext } from "../../contexts/authContext";
 
 const Header = () => {
   const navigate = useNavigate();
+  const { currentUser, handleLogout } = useContext(authContext);
 
   return (
     <header className="header">
@@ -35,6 +37,31 @@ const Header = () => {
               <p onClick={() => navigate("/catalog")}>КАТАЛОГ</p>
               <p onClick={() => navigate("/about-us")}>О НАС</p>
               <p onClick={() => navigate("/testimonials")}>ОТЗЫВЫ</p>
+
+              <div>
+                {currentUser ? (
+                  <div>
+                    <h6>{currentUser}</h6>
+                    <button onClick={() => handleLogout(navigate)}>
+                      Logout
+                    </button>
+                  </div>
+                ) : (
+                  <div>
+                    <button onClick={() => navigate("/login")}>Login</button>
+                    <button onClick={() => navigate("/register")}>
+                      Register
+                    </button>
+                  </div>
+                )}
+              </div>
+
+              {/* <button onClick={() => navigate("/login")} variant="outlined">
+                Login
+              </button>
+              <button onClick={() => navigate("/register")} variant="outlined">
+                Register
+              </button> */}
             </div>
           </nav>
         </div>
@@ -47,3 +74,5 @@ const Header = () => {
 };
 
 export default Header;
+
+// надо сделать гит пуш

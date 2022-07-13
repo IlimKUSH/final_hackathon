@@ -1,0 +1,126 @@
+.us {
+  display: flex;
+  justify-content: center;
+  color: #ffffff;
+}
+.liniya {
+  display: flex;
+  justify-content: center;
+  margin-top: 3px;
+}
+hr {
+  display: flex;
+  height: 2px;
+  width: 300px;
+  border: 2px solid #d87700;
+}
+.child-img1 {
+  margin-top: 50px;
+  width: 300px;
+  height: 400px;
+  background-image: url("../../images/statham.jpeg");
+}
+.child-img2 {
+  margin-top: 50px;
+  width: 300px;
+  height: 400px;
+  background-image: url("../../images/statham.jpeg");
+}
+.child-img3 {
+  margin-top: 50px;
+  width: 300px;
+  height: 400px;
+  background-image: url("../../images/statham.jpeg");
+}
+.child-img4 {
+  margin-top: 50px;
+  width: 300px;
+  height: 400px;
+  background-image: url("../../images/statham.jpeg");
+}
+.child-img5 {
+  margin-top: 50px;
+  width: 300px;
+  height: 400px;
+  background-image: url("../../images/statham.jpeg");
+}
+.child-img6 {
+  margin-top: 50px;
+  width: 300px;
+  height: 400px;
+  background-image: url("../../images/statham.jpeg");
+}
+
+.parent-img {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.parent-img-2 {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.text1 > h2 {
+  color: #ffffff;
+  margin-top: 126px;
+  font-size: 18px;
+}
+.text1 > span {
+  margin-top: 5px;
+  font-size: 14px;
+  font-style: italic;
+}
+.text2 > h2 {
+  color: #ffffff;
+  margin-top: 262px;
+  font-size: 18px;
+}
+.text2 > span {
+  margin-top: 5px;
+  font-size: 14px;
+  font-style: italic;
+}
+.text3 > h2 {
+  color: #ffffff;
+  margin-top: 126px;
+  font-size: 18px;
+}
+.text3 > span {
+  margin-top: 5px;
+  font-size: 14px;
+  font-style: italic;
+}
+.text4 > h2 {
+  color: #ffffff;
+  margin-top: 126px;
+  font-size: 18px;
+}
+.text4 > span {
+  margin-top: 5px;
+  font-size: 14px;
+  font-style: italic;
+}
+.text5 > h2 {
+  color: #ffffff;
+  margin-top: 126px;
+  font-size: 18px;
+}
+.text5 > span {
+  margin-top: 5px;
+  font-size: 14px;
+  font-style: italic;
+}
+.text6 > h2 {
+  color: #ffffff;
+  margin-top: 126px;
+  font-size: 18px;
+}
+.text6 > span {
+  margin-top: 5px;
+  font-size: 14px;
+  font-style: italic;
+}
+.names {
+  margin-top: 65px;
+}

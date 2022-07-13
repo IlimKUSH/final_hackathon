@@ -1,0 +1,65 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 31px;
+}
+
+.firstImage {
+  width: 386px;
+  height: 185px;
+}
+
+.footer_right {
+  width: 40%;
+}
+
+.footer_catalog {
+  display: flex;
+  justify-content: space-between;
+}
+
+.image_inst {
+  margin-top: 92px;
+  width: 443px;
+  height: 842px;
+}
+
+.footer_contacts {
+  margin-top: 27px;
+  width: 235px;
+  height: 119px;
+  left: 178px;
+  top: 3827px;
+
+  font-family: "ABeeZee";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+
+  color: #c4c4c4;
+}
+
+.footer_whats {
+  width: 19.25px;
+  height: 20px;
+}
+
+.footer_ssylki {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer_so {
+  margin-top: 35px;
+}
+
+.footer_oplata {
+  display: flex;
+  align-items: center;
+}
+
+.footer_end {
+  margin-top: 167px;
+}
