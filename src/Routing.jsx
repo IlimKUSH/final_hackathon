@@ -27,6 +27,12 @@ const Routing = () => {
       <Route path="/payment" element={<Payment />} />
       <Route path="/favourites" element={<Favorites />} />
       <Route path="/catalog" element={<Catalog />} />
+
+      /* <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
+      <Route path="/register-success" element={<RegissterSuccess />} />
+      <Route path="/cart" element={<Cart />} /> */
+      
       <Route path="/products" element={<ProductsList />} />
       <Route path="/add" element={<AddProduct />} />
       {/* <Route path="/login" element={<Login />} /> */}
