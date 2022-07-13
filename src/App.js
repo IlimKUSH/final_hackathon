@@ -5,17 +5,20 @@ import Routing from "./Routing";
 import "./index.css";
 import ProductsContextProvider from "./contexts/productsContext";
 import CartContextProvider from "./contexts/cartContext";
+import AuthContextProvider from "./contexts/authContext";
 
 function App() {
   return (
-    <ProductsContextProvider>
-      <CartContextProvider>
-        <BrowserRouter>
-          <HeaderUp />
-          <Routing />
-        </BrowserRouter>
-      </CartContextProvider>
-    </ProductsContextProvider>
+    <AuthContextProvider>
+      <ProductsContextProvider>
+        <CartContextProvider>
+          <BrowserRouter>
+            <HeaderUp />
+            <Routing />
+          </BrowserRouter>
+        </CartContextProvider>
+      </ProductsContextProvider>
+    </AuthContextProvider>
   );
 }
 
