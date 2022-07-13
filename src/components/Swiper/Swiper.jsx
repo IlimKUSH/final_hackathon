@@ -15,9 +15,7 @@ export default () => {
       modules={[Navigation, Pagination, Scrollbar, A11y]}
       spaceBetween={50}
       slidesPerView={1}
-      navigation
-      onSwiper={swiper => console.log(swiper)}
-      onSlideChange={() => console.log("slide change")}>
+      navigation>
       <SwiperSlide className="slide">
         <div className="main__slide">
           <h2>Takamine</h2>

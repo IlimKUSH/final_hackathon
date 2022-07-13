@@ -7,11 +7,11 @@ import Cart from "../../images/cart.svg";
 import Fav from "../../images/fav.svg";
 import Swiper from "../Swiper/Swiper";
 import { useNavigate } from "react-router-dom";
-import { authContext } from "../../contexts/authContext";
+// import { authContext } from "../../contexts/authContext";
 
 const Header = () => {
   const navigate = useNavigate();
-  const { currentUser, handleLogout } = useContext(authContext);
+  // const { currentUser, handleLogout } = useContext(authContext);
 
   return (
     <header className="header">
@@ -38,8 +38,11 @@ const Header = () => {
               <p onClick={() => navigate("/about-us")}>О НАС</p>
               <p onClick={() => navigate("/testimonials")}>ОТЗЫВЫ</p>
 
-              <div>
-                {currentUser ? (
+              <button onClick={() => navigate("/products")}>Products</button>
+              <button onClick={() => navigate("/add")}>Add product</button>
+
+              {/* <div> */}
+              {/* {currentUser ? (
                   <div>
                     <h6>{currentUser}</h6>
                     <button onClick={() => handleLogout(navigate)}>
@@ -53,8 +56,8 @@ const Header = () => {
                       Register
                     </button>
                   </div>
-                )}
-              </div>
+                )} */}
+              {/* </div> */}
 
               {/* <button onClick={() => navigate("/login")} variant="outlined">
                 Login
