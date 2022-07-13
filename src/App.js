@@ -4,6 +4,7 @@ import Routing from "./Routing";
 import "./index.css";
 import ProductsContextProvider from "./contexts/productsContext";
 import CartContextProvider from "./contexts/cartContext";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <BrowserRouter>
           <HeaderUp />
           <Routing />
+          <Footer />
         </BrowserRouter>
       </CartContextProvider>
     </ProductsContextProvider>
