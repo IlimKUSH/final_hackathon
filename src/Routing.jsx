@@ -24,6 +24,7 @@ const Routing = () => {
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
       <Route path="/register-success" element={<RegissterSuccess />} />
+      <Route path="/cart" element={<Cart />} />
     </Routes>
   );
 };
