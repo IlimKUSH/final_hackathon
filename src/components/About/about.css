@@ -91,8 +91,32 @@ h2::after {
   align-items: center;
   justify-content: center;
   padding-left: 2px;
+  width: 300px;
   height: 400px;
-  overflow: hidden;
+  transition: all 0.5s;
+  translate: 1s;
+  /* overflow: hidden; */
+}
+.we-img-w:hover .block {
+  display: flex;
+}
+.block-text {
+  font-style: italic;
+}
+
+.block {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(19, 18, 24, 0.6);
+  padding: 20px;
+  display: none;
+  transition: all 0.5s;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .we-txt {
   margin-top: 14px;
@@ -257,58 +281,3 @@ a:-webkit-any-link {
   padding-left: 25px;
   padding-right: 25px;
 }
-
-/* .swiper-wrapper {
-  height: 400px !important;
-  margin-top: 15px;
-}
-
-.swiper-container {
-  max-width: 1400px;
-  margin: 0 auto;
-}
-.slide {
-  padding-right: 150px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  background: url("../../images/guitar-bg.png") no-repeat;
-  background-size: 100% auto;
-}
-.main__slide {
-  width: 350px;
-}
-.main__slide > h2 {
-  font-size: 36px;
-  color: #8f8f8f;
-}
-.main__slide > p {
-  font-size: 18px;
-  color: #8f8f8f;
-}
-
-.slide-2 {
-  background: url("../../images/swiper-slide2.png") no-repeat;
-}
-
-.slide-3 {
-  background: url("../../images/swiper-slide3.png") no-repeat;
-}
-
-.slide-4 {
-  background: url("../../images/swiper-slide4.png") no-repeat;
-}
-.main__slide > p {
-  margin-top: 20px;
-}
-
-.swiper-button-prev {
-  color: #e3e3e3 !important;
-  left: 100px !important;
-  right: auto;
-}
-.swiper-button-next {
-  color: #e3e3e3 !important;
-  right: 100px !important;
-  left: auto;
-} */
