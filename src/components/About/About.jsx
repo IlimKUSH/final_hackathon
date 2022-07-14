@@ -32,11 +32,11 @@ const About = () => {
               <a href="javascript:void(0);" className="we-it">
                 <div className="we-img-w">
                   <img src={Vsevlod} className="we-img" />
-                  <div className="we-img-ab-act">
-                    <div className="we-img-ab-act-txt-1">Всеволод </div>
-                    <div className="we-img-ab-act-txt-2">
+                  <div className="block">
+                    <div className="block-child">
+                      <div className="we-img-ab-act-txt-1">Всеволод </div>
                       <p>
-                        <span>
+                        <span className="block-text">
                           Главный поборник прав и морали, знаком с певицей
                           гречкой. В совершенстве владеет китайским
                           коммерческим, китайским матерным. При необходимости с
@@ -53,11 +53,13 @@ const About = () => {
               <a href="javascript:void(0);" className="we-it">
                 <div className="we-img-w">
                   <img src={Valera} className="we-img" />
-                  <div className="we-img-ab-act">
-                    <div className="we-img-ab-act-txt-1">Валерий </div>
-                    <div className="we-img-ab-act-txt-2">
+                  <div className="block">
+                    <div className="block-child">
+                      <div className="we-img-ab-act-txt-1">
+                        Валерий Дядя Валера{" "}
+                      </div>
                       <p>
-                        <span>
+                        <span className="block-text">
                           Скоростной ремонт помещений за 7 минут: дизайн,
                           разработка и воплощение. Расставляет по местам гитары
                           и людей.
@@ -70,52 +72,13 @@ const About = () => {
               </a>
 
               <a href="javascript:void(0);" className="we-it">
-                <div class="we-img-w">
-                  <img src={Gitar} className="we-img" />
-                  <div className="we-img-ab-act">
-                    <div clasNames="we-img-ab-act-txt-1">Андрей Симаков </div>
-                    <div className="we-img-ab-act-txt-2">
-                      <p>
-                        <span>
-                          Поглощает оливки, пьет из амфоры. С помощью
-                          дендро-фекальной методики собирает гитару из любых
-                          подручных материалов.
-                        </span>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="we-txt">Андрей Симаков</div>
-              </a>
-
-              <a href="javascript:void(0);" className="we-it">
-                <div class="we-img-w">
-                  <img src={Aleksey} className="we-img" />
-                  <div className="we-img-ab-act">
-                    <div className="we-img-ab-act-txt-1">Алексей Андреев </div>
-                    <div className="we-img-ab-act-txt-2">
-                      <p>
-                        <span>
-                          Знаком с Лениным, Александром Македонским, Вещим
-                          Олегом ибо имеет диплом учителя истории. Быстро понял,
-                          что гитары лучше, чем дети. На данный момент готовит к
-                          сдаче свою 74-ю мастеровую гитару.
-                        </span>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="we-txt">Алексей Андреев</div>
-              </a>
-
-              <a href="javascript:void(0);" className="we-it">
                 <div className="we-img-w">
-                  <img src={Maks} className="we-img" />
-                  <div className="we-img-ab-act">
-                    <div className="we-img-ab-act-txt-1">Алексей Дьяков </div>
-                    <div className="we-img-ab-act-txt-2">
+                  <img src={Andrey} className="we-img" />
+                  <div className="block">
+                    <div className="block-child">
+                      <div className="we-img-ab-act-txt-1">Андрей </div>
                       <p>
-                        <span>
+                        <span className="block-text">
                           Алексей Алексеевич, получил звание Гитар Гитарыч от
                           своих учеников. Обычный человек состоит на 80% из
                           воды, а Алексей из шуток, анекдотов и филологических
@@ -125,19 +88,62 @@ const About = () => {
                     </div>
                   </div>
                 </div>
-                <div className="we-txt">Алексей Дьяков</div>
+                <div className="we-txt">Андрей</div>
               </a>
 
               <a href="javascript:void(0);" className="we-it">
-                <div class="we-img-w">
-                  <img src={Andrey} className="we-img" />
-                  <div className="we-img-ab-act">
-                    <div className="we-img-ab-act-txt-1">Макс </div>
-                    <div className="we-img-ab-act-txt-2">
+                <div className="we-img-w">
+                  <img src={Aleksey} className="we-img" />
+                  <div className="block">
+                    <div className="block-child">
+                      <div className="we-img-ab-act-txt-1">
+                        Алексей Андреев{" "}
+                      </div>
                       <p>
-                        <span>
+                        <span className="block-text">
+                          Знаком с Лениным, Александром Македонским, Вещим
+                          Олегом ибо имеет диплом учителя истории. Быстро понял,
+                          что гитары лучше, чем дети. На данный момент готовит к
+                          сдаче свою 74-ю мастеровую гитару.
+                        </span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div className="we-txt">Алексей</div>
+              </a>
+
+              <a href="javascript:void(0);" className="we-it">
+                <div className="we-img-w">
+                  <img src={Gitar} className="we-img" />
+                  <div className="block">
+                    <div className="block-child">
+                      <div className="we-img-ab-act-txt-1">
+                        Алексей Дьяков Гитар Гитарыч
+                      </div>
+                      <p>
+                        <span className="block-text">
                           Заведует маркетингом. Уже 3-й раз приносит свой
                           телекастер на продажу, но постоянно уносит обратно.
+                        </span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div className="we-txt">Алексей</div>
+              </a>
+
+              <a href="javascript:void(0);" className="we-it">
+                <div className="we-img-w">
+                  <img src={Maks} className="we-img" />
+                  <div className="block">
+                    <div className="block-child">
+                      <div className="we-img-ab-act-txt-1">Макс </div>
+                      <p>
+                        <span className="block-text">
+                          Поглощает оливки, пьет из амфоры. С помощью
+                          дендро-фекальной методики собирает гитару из любых
+                          подручных материалов.
                         </span>
                       </p>
                     </div>
@@ -242,43 +248,6 @@ const About = () => {
             </div>
           </div>
         </div>
-        {/* <Swiper
-          modules={[Navigation, Pagination, Scrollbar, A11y]}
-          spaceBetween={50}
-          slidesPerView={1}
-          navigation
-          onSwiper={swiper => console.log(swiper)}
-          onSlideChange={() => console.log("slide change")}>
-          <SwiperSlide className="slide">
-            <div className="main__slide">
-              <h2>Takamine</h2>
-              <p>гитара</p>
-              <p>винтажная 12-струнная GJ72CE-12BSB</p>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide className="slide-2 slide">
-            <div className="main__slide">
-              <h2>Видео звонок в магазин</h2>
-              <p>
-                Эта фунция помогает увидеть и услышать инструмент в реальном
-                времени, что заметно упрощает выбор
-              </p>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide className="slide-3 slide">
-            <div className="main__slide">
-              <h2>Отстройка каждого инструмента</h2>
-              <p>Наши мастера отстраивают каждый инструмент перед отправкой</p>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide className="slide-4 slide">
-            <div className="main__slide">
-              <h2>Kepma G1</h2>
-              <p>Акустическая гитара </p>
-              <p>Инструмент из премиальной линейки G1</p>
-            </div>
-          </SwiperSlide>
-        </Swiper> */}
       </div>
     </>
   );
