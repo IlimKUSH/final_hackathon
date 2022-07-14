@@ -1,5 +1,7 @@
-import React, { useContext } from "react";
-import { Navigate, Route, Routes } from "react-router-dom";
+
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+
 import About from "./components/About/About";
 import AddProduct from "./components/AddProduct/AddProduct";
 import Cart from "./components/Cart/Cart";
@@ -20,12 +22,20 @@ const Routing = () => {
   return (
     <Routes>
       <Route path="/" element={<Main />} />
-      <Route path="/about-us" element={<About />} />
       <Route path="/cart" element={<Cart />} />
+
+      <Route path="/favorite" element={<Favorites />} />
+      <Route path="/about-us" element={<About />} />
       <Route path="/testimonials" element={<Testimonials />} />
       <Route path="/payment" element={<Payment />} />
       <Route path="/favourites" element={<Favorites />} />
       <Route path="/catalog" element={<Catalog />} />
+
+      /* <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
+      <Route path="/register-success" element={<RegissterSuccess />} />
+      <Route path="/cart" element={<Cart />} /> */
+      
       <Route path="/products" element={<ProductsList />} />
       <Route path="/add" element={<AddProduct />} />
       {/* <Route path="/login" element={<Login />} /> */}
