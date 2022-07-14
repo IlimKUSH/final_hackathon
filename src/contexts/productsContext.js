@@ -34,12 +34,13 @@ const ProductsContextProvider = ({ children }) => {
       const Authorization = `Bearer ${tokens.access}`;
       const config = {
         headers: {
-          "Access-Control-Allow-Origin": "*",
           Authorization,
         },
       };
-      const res = await axios(`${API}/products/`, config);
-
+      const res = await axios(
+        `${API}/products/${window.location.search}`,
+        config
+      );
       dispatch({
         type: "GET_PRODUCTS",
         payload: res.data,
@@ -49,12 +50,10 @@ const ProductsContextProvider = ({ children }) => {
     }
   }
   async function createProduct(newProduct, navigate) {
-    const qwer = { key: "qwe" };
-
     try {
       const tokens = JSON.parse(localStorage.getItem("tokens"));
       //config
-      const Authorization = `Bearer ${tokens.access}`;
+      // const Authorization = `Bearer ${tokens.access}`;
       // const config = {
       //   headers: {
       //     Authorization,
@@ -62,9 +61,10 @@ const ProductsContextProvider = ({ children }) => {
       // };
       const res = await axios.post(
         `${API}/products/`,
-        JSON.stringify(qwer) /*config*/
+        newProduct
+        // config
       );
-      console.log(res);
+      console.log(res.data);
 
       // navigate("/products");
       getProducts();

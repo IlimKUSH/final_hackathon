@@ -55,9 +55,6 @@
 .nav__content {
   display: flex;
 }
-.nav__content > p {
-  margin: 0 5px 0 5px;
-}
 
 .header-down__content {
   display: flex;
@@ -70,4 +67,5 @@
 }
 .nav__content > p {
   color: #ffffff;
+  margin: 0 5px 0 5px;
 }
