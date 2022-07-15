@@ -60,12 +60,12 @@ const Header = () => {
                 )} */}
               {/* </div> */}
 
-              {/* <button onClick={() => navigate("/login")} variant="outlined">
+              <button onClick={() => navigate("/login")} variant="outlined">
                 Login
               </button>
               <button onClick={() => navigate("/register")} variant="outlined">
                 Register
-              </button> */}
+              </button>
             </div>
           </nav>
         </div>
