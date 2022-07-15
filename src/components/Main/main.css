@@ -36,3 +36,51 @@
   background: url("../../images/string.png") no-repeat;
   margin-top: 30px;
 }
+
+.sponsors {
+  margin-top: 50px;
+  background: #cc7408;
+}
+.sponsors__content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.sponsors__content > * {
+  margin: 15px;
+}
+
+.famous__card {
+  width: 220px;
+  background: #3b3a40;
+  border-radius: 0px 30px 30px 5px;
+}
+.famous__card-info {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.famous__card-info > p:first-child {
+  font-size: 14px;
+  line-height: 35px;
+  color: #ffffff;
+}
+.famous__card-info > h5 {
+  font-size: 24px;
+  line-height: 15px;
+  color: #ffffff;
+}
+s {
+  margin: 15px 0 5px 0;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+}
+.famous__card-price {
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.swiper-button-prev-2 {
+  left: 10px !important;
+}
