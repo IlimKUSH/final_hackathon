@@ -25,7 +25,7 @@ const Header = () => {
             <img src={Logo} alt="logo" />
             <div className="header__ftrs">
               <img
-                onClick={() => navigate("/favourites")}
+                onClick={() => navigate("/favorites")}
                 src={Fav}
                 alt="favorites"
               />
@@ -35,8 +35,9 @@ const Header = () => {
           <nav className="header__nav">
             <div className="nav__content">
               <p onClick={() => navigate("/catalog")}>КАТАЛОГ</p>
-              <p onClick={() => navigate("/about-us")}>О НАС</p>
+              <p onClick={() => navigate("/about")}>О НАС</p>
               <p onClick={() => navigate("/testimonials")}>ОТЗЫВЫ</p>
+              <p onClick={() => navigate("/delivery")}>ДОСТАВКА</p>
 
               <button onClick={() => navigate("/products")}>Products</button>
               <button onClick={() => navigate("/add")}>Add product</button>

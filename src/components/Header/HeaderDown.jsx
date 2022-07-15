@@ -28,13 +28,14 @@ const HeaderDown = () => {
           <nav className="header__nav">
             <div className="nav__content">
               <p onClick={() => navigate("/catalog")}>КАТАЛОГ</p>
-              <p onClick={() => navigate("/about-us")}>О НАС</p>
+              <p onClick={() => navigate("/about")}>О НАС</p>
               <p onClick={() => navigate("/testimonials")}>ОТЗЫВЫ</p>
+              <p onClick={() => navigate("/delivery")}>ДОСТАВКА</p>
             </div>
           </nav>
           <div className="header__ftrs">
             <img
-              onClick={() => navigate("/favourites")}
+              onClick={() => navigate("/favorites")}
               src={Fav}
               alt="favorites"
             />
