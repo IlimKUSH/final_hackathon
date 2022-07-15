@@ -63,3 +63,18 @@
 .footer_end {
   margin-top: 167px;
 }
+.foot-pay-row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.foot-pay-img-w {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+}

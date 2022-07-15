@@ -30,10 +30,16 @@ const Footer = () => {
           </div>
           <div className="footer_contacts">
             <p>Остались вопросы?</p>
-            <p>8 (800) 100-26-80</p>
+            <a href="tel:8 (800) 100-26-80" className="hcontacts-item-link">
+              8 (800) 100-26-80
+            </a>
             <br />
             <p>ЕЖЕДНЕВНО 10:00 - 20:00</p>
-            <p>info@guitarlavka.ru</p>
+            <a
+              href="mailto:guitarlavka@yandex.ru"
+              className="hcontacts-item-link">
+              guitarlavka@yandex.ru
+            </a>
           </div>
           <div className="footer_ssylki">
             <img className="footer_whats" src={ImageWhats} alt="" />
@@ -44,11 +50,19 @@ const Footer = () => {
             <img className="footer_whats" src={ImageInsta} alt="" />
           </div>
           <p className="footer_so">СПОСОБЫ ОПЛАТЫ</p>
-          <div className="footer_oplata">
-            <img src={ImageVisa} alt="" />
-            <img src={ImageVisa1} alt="" />
-            <img src={ImagePp} alt="" />
-            <img src={ImageIpay} alt="" />
+          <div className="foot-pay-row">
+            <a href="javascript:void(0);" className="foot-pay-img-w">
+              <img src={ImageVisa} />
+            </a>
+            <a href="javascript:void(0);" className="foot-pay-img-w">
+              <img src={ImageVisa1} />
+            </a>
+            <a href="javascript:void(0);" className="foot-pay-img-w">
+              <img src={ImagePp} />
+            </a>
+            <a href="javascript:void(0);" className="foot-pay-img-w">
+              <img src={ImageIpay} />
+            </a>
           </div>
           <p className="footer_end">
             © 2021 GuitarLavka - музыкальный магазин
