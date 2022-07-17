@@ -31,6 +31,7 @@ const HeaderDown = () => {
               <p onClick={() => navigate("/about")}>О НАС</p>
               <p onClick={() => navigate("/testimonials")}>ОТЗЫВЫ</p>
               <p onClick={() => navigate("/delivery")}>ДОСТАВКА</p>
+              <p onClick={() => navigate("/contacts")}>КОНТАКТЫ</p>
             </div>
           </nav>
           <div className="header__ftrs">
