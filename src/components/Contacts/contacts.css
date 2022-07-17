@@ -6,22 +6,6 @@
 main {
   flex-grow: 1;
 }
-
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-menu,
-nav,
-section,
-summary {
-  display: block;
-}
 .contain {
   margin-left: auto;
   margin-right: auto;
