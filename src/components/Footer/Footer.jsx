@@ -28,6 +28,30 @@ const Footer = () => {
               инструмента и доставить его до вашей двери
             </p>
           </div>
+
+          <div className="footer_catalog1">
+            <div className="footer_catalog_first1">
+              <p>КАТАЛОГ</p>
+              <p style={{ marginTop: "11px" }}>Гитары</p>
+              <p>Укулеле</p>
+              <p>Аксесуары</p>
+              <p>Струны</p>
+            </div>
+            <div>
+              <p>СЕРВИС</p>
+              <p style={{ marginTop: "11px" }}>Оплата</p>
+              <p>Гарантия</p>
+              <p>Доставка</p>
+            </div>
+            <div>
+              <p>УСЛУГИ</p>
+              <p style={{ marginTop: "11px" }}>Ремонт</p>
+              <p>Онлайн подбор</p>
+              <p>Обучение</p>
+              <p>Комиссионка</p>
+            </div>
+          </div>
+
           <div className="footer_contacts">
             <p>Остались вопросы?</p>
             <a href="tel:8 (800) 100-26-80" className="hcontacts-item-link">
@@ -71,7 +95,7 @@ const Footer = () => {
         </div>
         <div className="footer_right">
           <div className="footer_catalog">
-            <div>
+            <div className="footer_catalog_first">
               <p>КАТАЛОГ</p>
               <p style={{ marginTop: "11px" }}>Гитары</p>
               <p>Укулеле</p>
@@ -92,6 +116,7 @@ const Footer = () => {
               <p>Комиссионка</p>
             </div>
           </div>
+
           <img className="image_inst" src={ImageInst} alt="" />
         </div>
       </div>
