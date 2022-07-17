@@ -202,7 +202,6 @@ img {
   justify-content: center;
 }
 a:-webkit-any-link {
-  color: -webkit-link;
   cursor: pointer;
 }
 .wehere-r {

@@ -32,43 +32,6 @@ const Header = () => {
               <img onClick={() => navigate("/cart")} src={Cart} alt="cart" />
             </div>
           </div>
-          <nav className="header__nav">
-            <div className="nav__content">
-              <p onClick={() => navigate("/catalog")}>КАТАЛОГ</p>
-              <p onClick={() => navigate("/about")}>О НАС</p>
-              <p onClick={() => navigate("/testimonials")}>ОТЗЫВЫ</p>
-              <p onClick={() => navigate("/delivery")}>ДОСТАВКА</p>
-              <p onClick={() => navigate("/contacts")}>КОНТАКТЫ</p>
-
-              <button onClick={() => navigate("/products")}>Products</button>
-              <button onClick={() => navigate("/add")}>Add product</button>
-
-              {/* <div> */}
-              {/* {currentUser ? (
-                  <div>
-                    <h6>{currentUser}</h6>
-                    <button onClick={() => handleLogout(navigate)}>
-                      Logout
-                    </button>
-                  </div>
-                ) : (
-                  <div>
-                    <button onClick={() => navigate("/login")}>Login</button>
-                    <button onClick={() => navigate("/register")}>
-                      Register
-                    </button>
-                  </div>
-                )} */}
-              {/* </div> */}
-
-              <button onClick={() => navigate("/login")} variant="outlined">
-                Login
-              </button>
-              <button onClick={() => navigate("/register")} variant="outlined">
-                Register
-              </button>
-            </div>
-          </nav>
         </div>
       </div>
       <div className="swiper-container">
