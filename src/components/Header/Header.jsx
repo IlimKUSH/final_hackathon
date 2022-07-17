@@ -38,6 +38,7 @@ const Header = () => {
               <p onClick={() => navigate("/about")}>О НАС</p>
               <p onClick={() => navigate("/testimonials")}>ОТЗЫВЫ</p>
               <p onClick={() => navigate("/delivery")}>ДОСТАВКА</p>
+              <p onClick={() => navigate("/contacts")}>КОНТАКТЫ</p>
 
               <button onClick={() => navigate("/products")}>Products</button>
               <button onClick={() => navigate("/add")}>Add product</button>
