@@ -281,3 +281,26 @@ a:-webkit-any-link {
   padding-left: 25px;
   padding-right: 25px;
 }
+
+@media all and (max-width: 991px) {
+  .contain {
+    max-width: 750px;
+  }
+  .we-w {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+@media all and (max-width: 1199px) {
+  .contain {
+    max-width: 970px;
+  }
+  .we-w {
+    flex-wrap: wrap;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .we-it {
+    margin-top: -20px;
+  }
+}
