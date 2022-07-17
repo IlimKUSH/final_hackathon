@@ -1,5 +1,5 @@
-import React from "react";
-import { Route, Routes } from "react-router-dom";
+import React, { useContext } from "react";
+import { Navigate, Route, Routes } from "react-router-dom";
 
 import About from "./components/About/About";
 import AddProduct from "./components/AddProduct/AddProduct";
@@ -19,7 +19,7 @@ import Testimonials from "./components/Testimonials/Testimonials";
 import { authContext } from "./contexts/authContext";
 
 const Routing = () => {
-  // const { currentUser } = useContext(authContext);
+  const { currentUser, loading } = useContext(authContext);
   return (
     <Routes>
       <Route path="/" element={<Main />} />
@@ -30,19 +30,15 @@ const Routing = () => {
       <Route path="/payment" element={<Payment />} />
       <Route path="/favourites" element={<Favorites />} />
       <Route path="/catalog" element={<Catalog />} />
-      <Route path="/login" element={<Login />} />
-      <Route path="/register" element={<Register />} />
-      <Route path="/register-success" element={<RegisterSuccess />} />
       <Route path="/cart" element={<Cart />} />
       <Route path="/products" element={<ProductsList />} />
       <Route path="/add" element={<AddProduct />} />
-      
       <Route path="/contacts" element={<Contacts />} />
       <Route path="/delivery" element={<Delivery />} />
-      {/* <Route path="/login" element={<Login />} /> */}
-      {/* <Route path="/register" element={<Register />} /> */}
-      {/* <Route path="/register-success" element={<RegissterSuccess />} /> */}
-      {/* <Route
+      {/* <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
+      <Route path="/register-success" element={<RegisterSuccess />} /> */}
+      <Route
         path="/login"
         element={currentUser ? <Navigate to="/products" replace /> : <Login />}
       />
@@ -73,7 +69,7 @@ const Routing = () => {
         element={
           currentUser ? <AddProduct /> : <Navigate to="/login" replace />
         }
-      /> */}
+      />
     </Routes>
   );
 };

@@ -84,3 +84,18 @@ s {
 .swiper-button-prev-2 {
   left: 10px !important;
 }
+
+span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: #c4c4c4;
+}
+
+/* target all bullets */
+span.swiper-pagination-bullet {
+  height: 5px;
+  background: #3b3a40;
+  padding: 0 20px 0 20px;
+  border-radius: 0;
+}
+.swiper__wrapper-2 {
+  height: 500px !important;
+}

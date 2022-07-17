@@ -29,7 +29,7 @@ const About = () => {
           </h2>
           <div className="we-w">
             <div className="we-it-w">
-              <a href="javascript:void(0);" className="we-it">
+              <a href="#" className="we-it">
                 <div className="we-img-w">
                   <img src={Vsevlod} className="we-img" />
                   <div className="block">
@@ -50,7 +50,7 @@ const About = () => {
                 <div className="we-txt">Всеволод</div>
               </a>
 
-              <a href="javascript:void(0);" className="we-it">
+              <a href="#" className="we-it">
                 <div className="we-img-w">
                   <img src={Valera} className="we-img" />
                   <div className="block">
@@ -71,7 +71,7 @@ const About = () => {
                 <div className="we-txt">Валерий</div>
               </a>
 
-              <a href="javascript:void(0);" className="we-it">
+              <a href="#" className="we-it">
                 <div className="we-img-w">
                   <img src={Andrey} className="we-img" />
                   <div className="block">
@@ -91,7 +91,7 @@ const About = () => {
                 <div className="we-txt">Андрей</div>
               </a>
 
-              <a href="javascript:void(0);" className="we-it">
+              <a href="#" className="we-it">
                 <div className="we-img-w">
                   <img src={Aleksey} className="we-img" />
                   <div className="block">
@@ -113,7 +113,7 @@ const About = () => {
                 <div className="we-txt">Алексей</div>
               </a>
 
-              <a href="javascript:void(0);" className="we-it">
+              <a href="#" className="we-it">
                 <div className="we-img-w">
                   <img src={Gitar} className="we-img" />
                   <div className="block">
@@ -133,7 +133,7 @@ const About = () => {
                 <div className="we-txt">Алексей</div>
               </a>
 
-              <a href="javascript:void(0);" className="we-it">
+              <a href="#" className="we-it">
                 <div className="we-img-w">
                   <img src={Maks} className="we-img" />
                   <div className="block">

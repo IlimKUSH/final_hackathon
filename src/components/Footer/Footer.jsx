@@ -51,16 +51,16 @@ const Footer = () => {
           </div>
           <p className="footer_so">СПОСОБЫ ОПЛАТЫ</p>
           <div className="foot-pay-row">
-            <a href="javascript:void(0);" className="foot-pay-img-w">
+            <a href="#" className="foot-pay-img-w">
               <img src={ImageVisa} />
             </a>
-            <a href="javascript:void(0);" className="foot-pay-img-w">
+            <a href="#" className="foot-pay-img-w">
               <img src={ImageVisa1} />
             </a>
-            <a href="javascript:void(0);" className="foot-pay-img-w">
+            <a href="#" className="foot-pay-img-w">
               <img src={ImagePp} />
             </a>
-            <a href="javascript:void(0);" className="foot-pay-img-w">
+            <a href="#" className="foot-pay-img-w">
               <img src={ImageIpay} />
             </a>
           </div>

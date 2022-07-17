@@ -3,7 +3,7 @@ import axios from "axios";
 
 export const authContext = React.createContext();
 
-const API = "https://backend-for-fs-makers.herokuapp.com/api/v1";
+const API = "evening-ravine-58086.herokuapp.com";
 
 const AuthContextProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState(false);
@@ -12,11 +12,11 @@ const AuthContextProvider = ({ children }) => {
   async function handleRegister(formData, navigate) {
     setLoading(true);
     try {
-      const res = await axios.post(`${API}/account/register/`, formData);
-      // console.log(res);
+      const res = await axios.post(`${API}/account/registration/`, formData);
+      console.log(res);
       navigate("/register-success");
-    } catch (error) {
-      setError(Object.values(error.response.data).flat(2));
+    } catch (err) {
+      console.log(err);
     } finally {
       setLoading(false);
     }
@@ -29,7 +29,7 @@ const AuthContextProvider = ({ children }) => {
       localStorage.setItem("email", email);
       setCurrentUser(email);
       navigate("/");
-      // console.log(res);
+      console.log(res);
     } catch (err) {
       console.log(err);
       setError([err.response.data.detail]);
@@ -44,10 +44,11 @@ const AuthContextProvider = ({ children }) => {
       const config = {
         headers: {
           Authorization,
+          "Access-Control-Allow-Origin": "*",
         },
       };
       const res = await axios.post(
-        `${API}/account/token/refresh/`,
+        `${API}/account/refresh/`,
         {
           refresh: tokens.refresh,
         },
@@ -80,8 +81,8 @@ const AuthContextProvider = ({ children }) => {
       value={{
         currentUser,
         error,
-        setError,
         loading,
+        setError,
         handleRegister,
         handleLogin,
         checkAuth,
