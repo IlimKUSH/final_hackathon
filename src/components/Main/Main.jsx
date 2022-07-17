@@ -67,10 +67,10 @@ const Main = () => {
         <div className="container">
           <div className="famous__content">
             <Swiper
+              className="swiper__wrapper-2"
               modules={[Navigation, Pagination, A11y]}
               spaceBetween={50}
               slidesPerView={4}
-              autoplay={{ delay: 1000 }}
               pagination={{ clickable: true }}
               navigation>
               <SwiperSlide>
