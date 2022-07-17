@@ -6,7 +6,7 @@ import Logo from "../../images/logo.png";
 import Search from "../../images/search.svg";
 import Cart from "../../images/cart.svg";
 import Fav from "../../images/fav.svg";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const HeaderDown = () => {
   const navigate = useNavigate();
@@ -25,6 +25,7 @@ const HeaderDown = () => {
             <img src={Search} alt="search" />
             <input placeholder="Поиск" type="text" />
           </div>
+
           <nav className="header__nav">
             <div className="nav__content">
               <p onClick={() => navigate("/catalog")}>КАТАЛОГ</p>
@@ -41,6 +42,41 @@ const HeaderDown = () => {
               alt="favorites"
             />
             <img onClick={() => navigate("/cart")} src={Cart} alt="cart" />
+          </div>
+          <div class="hamburger-menu">
+            <input id="menu__toggle" type="checkbox" />
+            <label class="menu__btn" for="menu__toggle">
+              <span></span>
+            </label>
+            <ul class="menu__box">
+              <img src={Logo} alt="logo" />
+              <p>Главная / Меню</p>
+              <li className="menu__box-item">
+                <Link to={"/catalog"} class="menu__item" href="#">
+                  Каталог
+                </Link>
+              </li>
+              <li>
+                <Link to={"/about"} class="menu__item" href="#">
+                  О нас
+                </Link>
+              </li>
+              <li>
+                <Link to={"/testimonials"} class="menu__item" href="#">
+                  Отзывы
+                </Link>
+              </li>
+              <li>
+                <Link to={"/delivery"} class="menu__item" href="#">
+                  Доставка
+                </Link>
+              </li>
+              <li>
+                <Link to={"/contacts"} class="menu__item" href="#">
+                  Контакты
+                </Link>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
