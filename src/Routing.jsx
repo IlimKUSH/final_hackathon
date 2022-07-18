@@ -31,8 +31,11 @@ const Routing = () => {
       <Route path="/about" element={<About />} />
       <Route path="/testimonials" element={<Testimonials />} />
       <Route path="/payment" element={<Payment />} />
+
+      <Route path="/favorites" element={<Favorites />} />
+
       <Route path="PaymentSucces" element={<PaymentSucces />} />
-      <Route path="/favourites" element={<Favorites />} />
+
       <Route path="/catalog" element={<Catalog />} />
 
       <Route path="/cart" element={<Cart />} />

@@ -195,7 +195,49 @@ textarea.revform-textarea {
   line-height: 19px;
   color: rgba(255, 255, 255, 0.6);
 }
+.ec-rating-stars span {
+  background-image: url("../../images/star.svg") 0 -16px no-repeat;
+  width: 20px;
+  height: 16px;
+  float: left;
+  display: block;
+  margin: 0;
+  cursor: pointer;
+}
 
+.ec-rating-stars > span.active {
+  background-image: url("../../images/star.svg") !important;
+}
+.ec-rating-stars > span {
+  float: left;
+  display: block;
+  margin: 0;
+  cursor: pointer;
+}
+.ec-rating-stars > span {
+  background-image: url("../../images/star.svg") !important;
+  width: 12px !important;
+  height: 12px !important;
+}
+.ec-rating-stars > span.active {
+  background-image: url("../../images/star.svg") !important;
+}
+.ec-clearfix:after {
+  clear: both;
+}
+
+.ec-clearfix:before,
+.ec-clearfix:after {
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+*:before,
+*:after {
+  box-sizing: border-box;
+}
 @media all and (max-width: 580px) {
   .revblock {
     padding: 45px 15px;
