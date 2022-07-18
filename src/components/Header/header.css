@@ -90,7 +90,7 @@
   width: 20px;
   height: 12px;
   cursor: pointer;
-  z-index: 1;
+  z-index: 15;
 }
 /* добавляем "гамбургер" */
 .menu__btn > span,
@@ -126,6 +126,7 @@
   padding: 5px;
   background-color: #131218;
   box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
 /* элементы меню */
 .menu__item {
