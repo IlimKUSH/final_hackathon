@@ -10,17 +10,17 @@ import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
-    <AuthContextProvider>
-      <ProductsContextProvider>
-        <CartContextProvider>
-          <BrowserRouter>
-            <HeaderUp />
-            <Routing />
-            <Footer />
-          </BrowserRouter>
-        </CartContextProvider>
-      </ProductsContextProvider>
-    </AuthContextProvider>
+    // <AuthContextProvider>
+    <ProductsContextProvider>
+      <CartContextProvider>
+        <BrowserRouter>
+          <HeaderUp />
+          <Routing />
+          <Footer />
+        </BrowserRouter>
+      </CartContextProvider>
+    </ProductsContextProvider>
+    // </AuthContextProvider>
   );
 }
 

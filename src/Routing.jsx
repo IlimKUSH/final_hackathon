@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 
@@ -10,6 +9,7 @@ import Favorites from "./components/Favorites/Favorites";
 import Login from "./components/Login/Login";
 import Main from "./components/Main/Main";
 import Payment from "./components/Payment/Payment";
+import PaymentSucces from "./components/PaymentSucces/PaymentSucces";
 import ProductsCard from "./components/ProductsCard/ProductsCard";
 import ProductsList from "./components/ProductsList/ProductsList";
 import Register from "./components/Register/Register";
@@ -23,19 +23,17 @@ const Routing = () => {
     <Routes>
       <Route path="/" element={<Main />} />
       <Route path="/cart" element={<Cart />} />
-
       <Route path="/favorite" element={<Favorites />} />
       <Route path="/about-us" element={<About />} />
       <Route path="/testimonials" element={<Testimonials />} />
       <Route path="/payment" element={<Payment />} />
+      <Route path="PaymentSucces" element={<PaymentSucces />} />
       <Route path="/favourites" element={<Favorites />} />
       <Route path="/catalog" element={<Catalog />} />
-
       /* <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
-      <Route path="/register-success" element={<RegissterSuccess />} />
+      <Route path="/register-success" element={<RegisterSuccess />} />
       <Route path="/cart" element={<Cart />} /> */
-      
       <Route path="/products" element={<ProductsList />} />
       <Route path="/add" element={<AddProduct />} />
       {/* <Route path="/login" element={<Login />} /> */}
