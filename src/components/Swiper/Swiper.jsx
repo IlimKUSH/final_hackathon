@@ -1,4 +1,4 @@
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+import { Navigation, Scrollbar, A11y } from "swiper";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -6,13 +6,12 @@ import "./swiper.css";
 
 import "swiper/css";
 import "swiper/css/navigation";
-import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
 export default () => {
   return (
     <Swiper
-      modules={[Navigation, Pagination, Scrollbar, A11y]}
+      modules={[Navigation, Scrollbar, A11y]}
       spaceBetween={50}
       slidesPerView={1}
       navigation>

@@ -1,3 +1,7 @@
+.container {
+  width: 100%;
+}
+
 .footer {
   display: flex;
   justify-content: space-between;
@@ -15,6 +19,11 @@
 
 .footer_catalog {
   display: flex;
+  justify-content: space-between;
+}
+
+.footer_catalog1 {
+  display: none;
   justify-content: space-between;
 }
 
@@ -62,4 +71,67 @@
 
 .footer_end {
   margin-top: 167px;
+}
+.foot-pay-row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.foot-pay-img-w {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* адаптивка */
+
+@media all and (max-width: 1200px) {
+  .footer {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+@media all and (max-width: 900px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer_catalog {
+    display: none;
+  }
+  .image_inst {
+    display: none;
+  }
+  .footer_catalog1 {
+    display: flex;
+    margin-top: 20px;
+  }
+  .footer_end {
+    margin-top: 40px;
+  }
+}
+
+@media all and (max-width: 700px) {
+  .footer {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .firstImage {
+    width: 100%;
+  }
 }

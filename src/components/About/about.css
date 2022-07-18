@@ -1,9 +1,4 @@
-* {
-  box-sizing: border-box;
-}
 body {
-  font-family: "ABeeZee", sans-serif;
-  font-weight: normal;
   font-size: 13px;
   position: relative;
   min-height: 100vh;
@@ -91,8 +86,32 @@ h2::after {
   align-items: center;
   justify-content: center;
   padding-left: 2px;
+  width: 300px;
   height: 400px;
-  overflow: hidden;
+
+  /* overflow: hidden; */
+}
+.we-img-w:hover .block {
+  opacity: 1;
+}
+.block-text {
+  font-style: italic;
+}
+
+.block {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(19, 18, 24, 0.6);
+  padding: 20px;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
 }
 .we-txt {
   margin-top: 14px;
@@ -183,7 +202,6 @@ img {
   justify-content: center;
 }
 a:-webkit-any-link {
-  color: -webkit-link;
   cursor: pointer;
 }
 .wehere-r {
@@ -258,57 +276,25 @@ a:-webkit-any-link {
   padding-right: 25px;
 }
 
-/* .swiper-wrapper {
-  height: 400px !important;
-  margin-top: 15px;
+@media all and (max-width: 991px) {
+  .contain {
+    max-width: 750px;
+  }
+  .we-w {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
-
-.swiper-container {
-  max-width: 1400px;
-  margin: 0 auto;
+@media all and (max-width: 1199px) {
+  .contain {
+    max-width: 970px;
+  }
+  .we-w {
+    flex-wrap: wrap;
+  }
 }
-.slide {
-  padding-right: 150px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  background: url("../../images/guitar-bg.png") no-repeat;
-  background-size: 100% auto;
+@media only screen and (max-width: 991px) {
+  .we-it {
+    margin-top: -20px;
+  }
 }
-.main__slide {
-  width: 350px;
-}
-.main__slide > h2 {
-  font-size: 36px;
-  color: #8f8f8f;
-}
-.main__slide > p {
-  font-size: 18px;
-  color: #8f8f8f;
-}
-
-.slide-2 {
-  background: url("../../images/swiper-slide2.png") no-repeat;
-}
-
-.slide-3 {
-  background: url("../../images/swiper-slide3.png") no-repeat;
-}
-
-.slide-4 {
-  background: url("../../images/swiper-slide4.png") no-repeat;
-}
-.main__slide > p {
-  margin-top: 20px;
-}
-
-.swiper-button-prev {
-  color: #e3e3e3 !important;
-  left: 100px !important;
-  right: auto;
-}
-.swiper-button-next {
-  color: #e3e3e3 !important;
-  right: 100px !important;
-  left: auto;
-} */
