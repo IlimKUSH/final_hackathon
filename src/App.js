@@ -14,18 +14,16 @@ function App() {
   return (
 
     <AuthContextProvider>
-      {/* <ProductsContextProvider> */}
-      <FavContextProvider>
-        <CartContextProvider>
-          <BrowserRouter>
-            <HeaderUp />
-            {/* <HeaderDown /> */}
-            <Routing />
-            <Footer />
-          </BrowserRouter>
-        </CartContextProvider>
-      </FavContextProvider>
-      {/* </ProductsContextProvider> */}
+      <ProductsContextProvider>
+        {/* <CartContextProvider> */}
+        <BrowserRouter>
+          <HeaderUp />
+          {/* <HeaderDown /> */}
+          <Routing />
+          <Footer />
+        </BrowserRouter>
+        {/* </CartContextProvider> */}
+      </ProductsContextProvider>
     </AuthContextProvider>
   );
 }
