@@ -11,6 +11,7 @@ import HeaderDown from "./components/Header/HeaderDown";
 
 function App() {
   return (
+
     <AuthContextProvider>
       {/* <ProductsContextProvider> */}
       {/* <CartContextProvider> */}
