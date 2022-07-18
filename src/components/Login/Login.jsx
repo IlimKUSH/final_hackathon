@@ -29,28 +29,28 @@ const Login = () => {
   return (
     <div>
       <HeaderDown />
-      <Container maxWidth="sm">
-        <Box display={"flex"} flexDirection={"column"} marginTop={"50px"}>
-          <Typography variant="h5">Login</Typography>
+      <div className="container">
+        <div display={"flex"} flexDirection={"column"} marginTop={"50px"}>
+          <h5>Login</h5>
           {error ? <Alert severity="error">{error}</Alert> : null}
-          <TextField
+          <input
             value={email}
             onChange={e => setEmail(e.target.value)}
             variant="outlined"
             label="Email"
           />
-          <TextField
+          <input
             value={password}
             onChange={e => setPassword(e.target.value)}
             variant="outlined"
             label="Password"
             type="password"
           />
-          <Button variant="outlined" onClick={handleSave}>
+          <button variant="outlined" onClick={handleSave}>
             Login
-          </Button>
-        </Box>
-      </Container>
+          </button>
+        </div>
+      </div>
     </div>
   );
 };

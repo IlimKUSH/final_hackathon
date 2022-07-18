@@ -44,18 +44,12 @@ const Routing = () => {
       />
       <Route
         path="/register"
-        element={
-          currentUser ? <Navigate to="/products" replace /> : <Register />
-        }
+        element={currentUser ? <Navigate to="/" replace /> : <Register />}
       />
       <Route
         path="/register-success"
         element={
-          currentUser ? (
-            <Navigate to="/products" replace />
-          ) : (
-            <RegisterSuccess />
-          )
+          currentUser ? <Navigate to="/" replace /> : <RegisterSuccess />
         }
       />
       <Route

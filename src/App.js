@@ -12,16 +12,16 @@ import HeaderDown from "./components/Header/HeaderDown";
 function App() {
   return (
     <AuthContextProvider>
-      {/* <ProductsContextProvider> */}
-      {/* <CartContextProvider> */}
-      <BrowserRouter>
-        <HeaderUp />
-        {/* <HeaderDown /> */}
-        <Routing />
-        <Footer />
-      </BrowserRouter>
-      {/* </CartContextProvider> */}
-      {/* </ProductsContextProvider> */}
+      <ProductsContextProvider>
+        {/* <CartContextProvider> */}
+        <BrowserRouter>
+          <HeaderUp />
+          {/* <HeaderDown /> */}
+          <Routing />
+          <Footer />
+        </BrowserRouter>
+        {/* </CartContextProvider> */}
+      </ProductsContextProvider>
     </AuthContextProvider>
   );
 }

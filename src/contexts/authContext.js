@@ -1,10 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
-
 export const authContext = React.createContext();
-
-const API = "evening-ravine-58086.herokuapp.com";
-
+const API = "https://evening-ravine-58086.herokuapp.com";
 const AuthContextProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState(false);
   const [error, setError] = useState(false);
@@ -13,10 +10,10 @@ const AuthContextProvider = ({ children }) => {
     setLoading(true);
     try {
       const res = await axios.post(`${API}/account/registration/`, formData);
-      console.log(res);
+      // console.log(res);
       navigate("/register-success");
     } catch (err) {
-      console.log(err);
+      setError(Object.values(err.response.data).flat(2));
     } finally {
       setLoading(false);
     }
@@ -29,7 +26,7 @@ const AuthContextProvider = ({ children }) => {
       localStorage.setItem("email", email);
       setCurrentUser(email);
       navigate("/");
-      console.log(res);
+      // console.log(res);
     } catch (err) {
       console.log(err);
       setError([err.response.data.detail]);
@@ -44,7 +41,6 @@ const AuthContextProvider = ({ children }) => {
       const config = {
         headers: {
           Authorization,
-          "Access-Control-Allow-Origin": "*",
         },
       };
       const res = await axios.post(
