@@ -1,5 +1,7 @@
+
 import React, { useContext } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
+
 
 import About from "./components/About/About";
 import AddProduct from "./components/AddProduct/AddProduct";
@@ -11,6 +13,7 @@ import Favorites from "./components/Favorites/Favorites";
 import Login from "./components/Login/Login";
 import Main from "./components/Main/Main";
 import Payment from "./components/Payment/Payment";
+import PaymentSucces from "./components/PaymentSucces/PaymentSucces";
 import ProductsCard from "./components/ProductsCard/ProductsCard";
 import ProductsList from "./components/ProductsList/ProductsList";
 import Register from "./components/Register/Register";
@@ -28,9 +31,15 @@ const Routing = () => {
       <Route path="/about" element={<About />} />
       <Route path="/testimonials" element={<Testimonials />} />
       <Route path="/payment" element={<Payment />} />
-      <Route path="/favourites" element={<Favorites />} />
+
+      <Route path="/favorites" element={<Favorites />} />
+
+      <Route path="PaymentSucces" element={<PaymentSucces />} />
+
       <Route path="/catalog" element={<Catalog />} />
+
       <Route path="/cart" element={<Cart />} />
+
       <Route path="/products" element={<ProductsList />} />
       <Route path="/add" element={<AddProduct />} />
       <Route path="/contacts" element={<Contacts />} />
