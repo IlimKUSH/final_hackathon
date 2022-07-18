@@ -12,6 +12,7 @@ import FavContextProvider from "./contexts/favContext";
 
 function App() {
   return (
+
     <AuthContextProvider>
       {/* <ProductsContextProvider> */}
       <FavContextProvider>

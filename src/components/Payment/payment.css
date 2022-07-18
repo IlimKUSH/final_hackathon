@@ -22,6 +22,7 @@ form {
   border: 1px solid #dddddd;
   color: #666666;
   background: transparent;
+  width: calc(50% - 4px);
 }
 .inp_data:focus {
   outline: none;
@@ -40,7 +41,7 @@ form {
   border: 1px solid #dddddd;
   color: #666666;
   background: transparent;
-  width: 415px;
+  width: 461px;
 }
 .number:focus {
   outline: none;
@@ -71,7 +72,7 @@ form {
   border: 1px solid rgba(255, 255, 255, 0.6);
 }
 h3 {
-  margin-left: 128px;
+  /* margin-left: 128px; */
   font-weight: 400;
   font-size: 24px;
   line-height: 35px;
@@ -80,7 +81,7 @@ h3 {
 }
 .selection {
   display: flex;
-  margin-left: 128px;
+  /* margin-left: 128px; */
   flex-direction: column;
 }
 .text {
@@ -127,4 +128,37 @@ h3 {
   color: white;
   margin-top: 6px;
   font-size: 24px;
+}
+.curr_product {
+  padding: 25px;
+  box-shadow: rgb(255 255 255 / 24%) 0px 4px 15px 1px;
+  border-radius: 15px;
+  margin-bottom: 21px;
+  width: 100%;
+  color: white;
+  min-height: 100vh;
+}
+.right_block {
+  max-width: 352px;
+  width: 100%;
+}
+.contained {
+  max-width: 1060px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+#amount-order {
+  color: #a1a1a1;
+  font-size: 14px;
+  margin-bottom: 11px;
+  border-width: 2px;
+  border-bottom-style: solid;
+  border-color: #ea8305;
+  padding-bottom: 4px;
+}
+#price {
+  color: #a1a1a1;
+  margin-bottom: 7px;
+  font-size: 14px;
 }

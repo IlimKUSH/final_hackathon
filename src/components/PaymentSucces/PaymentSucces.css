@@ -1,0 +1,46 @@
+.thanks {
+  box-sizing: border-box;
+  display: block;
+  background: #fcf7f2;
+  box-shadow: rgb(0 0 0 / 25%) 0px 4px 4px;
+  border-radius: 30px;
+  text-align: center;
+  padding: 39px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1;
+}
+#txt-1 {
+  font-size: 24px;
+  text-align: center;
+  color: #3b3a40;
+  margin-bottom: 10px;
+}
+#txt-2 {
+  font-size: 16px;
+  line-height: 1.4;
+  text-align: center;
+  color: rgba(19, 18, 24, 0.6);
+  max-width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5px;
+}
+#thnx-back {
+  font-size: 16px;
+  color: #ea8305;
+}
+.h-1 {
+  margin-bottom: 15px;
+  font-size: 36px;
+  color: white;
+  padding-bottom: 3px;
+  position: relative;
+}
+
+.contain {
+  max-width: 1060px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
