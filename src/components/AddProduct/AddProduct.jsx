@@ -34,7 +34,7 @@ const AddProduct = ({ item }) => {
     newProduct.append("image", image);
     createProduct(newProduct, navigate);
   }
-  console.log(categories);
+  // console.log(category);
   return (
     <div className="container">
       <div className="add">
@@ -59,10 +59,7 @@ const AddProduct = ({ item }) => {
         />
         <select value={category} onChange={e => setCategory(e.target.value)}>
           {categories.map(item => (
-            <option key={item.id} value={item.id}>
-              {console.log(item)}
-              {item.name}
-            </option>
+            <option key={item.id}>{item.name}</option>
           ))}
           {/* <option value={category} onChange={e => setCategory(e.target.value)}>
             Пункт 1
