@@ -1,4 +1,5 @@
 import React from "react";
+
 import Image from "./imageFooter/GuitarLavka.png";
 import ImageInst from "./imageFooter/FooterInstagram.png";
 import ImageWhats from "./imageFooter/Whats.png";
@@ -12,10 +13,9 @@ import ImageVisa1 from "./imageFooter/Visa1.png";
 import ImagePp from "./imageFooter/Pp.png";
 import ImageIpay from "./imageFooter/Ipay.png";
 
-import "./Footer.css";
-import { Box } from "@mui/material";
+import "./Footer1.css";
 
-const Footer = () => {
+const Footer1 = () => {
   return (
     <div className="container">
       <div className="footer">
@@ -28,7 +28,6 @@ const Footer = () => {
               инструмента и доставить его до вашей двери
             </p>
           </div>
-
           <div className="footer_catalog1">
             <div className="footer_catalog_first1">
               <p>КАТАЛОГ</p>
@@ -124,4 +123,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default Footer1;

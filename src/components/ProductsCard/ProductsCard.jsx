@@ -119,6 +119,6 @@ import { productsContext } from "../../contexts/productsContext";
 export default function ProductsCard({ item }) {
   const navigate = useNavigate();
   const { deleteProduct } = React.useContext(productsContext);
-  console.log(item);
+  // console.log(item);
   return <div className="container"></div>;
 }

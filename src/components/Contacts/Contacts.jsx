@@ -17,11 +17,13 @@ import ShopLeft from "../../images/shop_left.png";
 import ShopOut from "../../images/shop_out.png";
 import ShopRight from "../../images/shop_right.png";
 import { useNavigate } from "react-router-dom";
+import HeaderDown from "../Header/HeaderDown";
 
 const Contacts = () => {
   const navigate = useNavigate();
   return (
     <div>
+      <HeaderDown />
       <div className="hcontacts">
         <div className="contain">
           <div className="path">
