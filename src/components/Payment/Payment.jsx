@@ -30,6 +30,12 @@ export default class PaymentForm extends React.Component {
     return (
       <div>
         <HeaderDown />
+        <div>
+          <Link to={"/"}>
+            <p className="bread">Главная</p>
+          </Link>
+        </div>
+        <div style={{ width: "20vh" }}></div>
         <div className="contained">
           <div style={{ display: "flex", justifyContent: "space-between" }}>
             <div className="main">
