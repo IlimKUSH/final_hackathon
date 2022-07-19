@@ -1,7 +1,5 @@
-
 import React, { useContext } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
-
 
 import About from "./components/About/About";
 import AddProduct from "./components/AddProduct/AddProduct";
@@ -9,12 +7,13 @@ import Cart from "./components/Cart/Cart";
 import Catalog from "./components/Catalog/Catalog";
 import Contacts from "./components/Contacts/Contacts";
 import Delivery from "./components/Delivery/Delivery";
+import Details from "./components/Details/Details";
+import Edit from "./components/Edit/Edit";
 import Favorites from "./components/Favorites/Favorites";
 import Login from "./components/Login/Login";
 import Main from "./components/Main/Main";
 import Payment from "./components/Payment/Payment";
 import PaymentSucces from "./components/PaymentSucces/PaymentSucces";
-import ProductsCard from "./components/ProductsCard/ProductsCard";
 import ProductsList from "./components/ProductsList/ProductsList";
 import Register from "./components/Register/Register";
 import RegisterSuccess from "./components/RegisterSuccess/RegisterSuccess";
@@ -34,7 +33,7 @@ const Routing = () => {
 
       <Route path="/favorites" element={<Favorites />} />
 
-      <Route path="PaymentSucces" element={<PaymentSucces />} />
+      <Route path="/PaymentSucces" element={<PaymentSucces />} />
 
       <Route path="/catalog" element={<Catalog />} />
 
@@ -73,6 +72,8 @@ const Routing = () => {
           currentUser ? <AddProduct /> : <Navigate to="/login" replace />
         }
       />
+      <Route path="/edit/:id" element={<Edit />} />
+      <Route path="/products/:id" element={<Details />} />
     </Routes>
   );
 };

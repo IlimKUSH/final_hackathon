@@ -45,9 +45,7 @@ const Login = () => {
             <input
               value={password}
               onChange={e => setPassword(e.target.value)}
-              variant="outlined"
-              label="Password"
-              type="password"
+              type={"password"}
             />
             <small>
               Укажите пароль, которые вы использовали при регистрации.

@@ -5,8 +5,11 @@ export const productsContext = React.createContext();
 
 const INIT_STATE = {
   products: [],
+  pages: 0,
   categories: [],
   oneProduct: null,
+  favorites: [],
+  favoritesPages: 0,
 };
 function reducer(state = INIT_STATE, action) {
   switch (action.type) {
@@ -14,6 +17,12 @@ function reducer(state = INIT_STATE, action) {
       return {
         ...state,
         products: action.payload.results,
+      };
+    case "GET_FAVORITES":
+      return {
+        ...state,
+        favorites: action.payload.results,
+        favoritesPages: Math.ceil(action.payload.count / 5),
       };
     case "GET_CATEGORIES":
       return { ...state, categories: action.payload };
@@ -23,13 +32,14 @@ function reducer(state = INIT_STATE, action) {
       return state;
   }
 }
-const API = "https://evening-ravine-58086.herokuapp.com";
+const API = "https://shielded-eyrie-90268.herokuapp.com";
 
 const ProductsContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
   async function getProducts() {
     try {
       const tokens = JSON.parse(localStorage.getItem("tokens"));
+      // config
       const Authorization = `Bearer ${tokens.access}`;
       const config = {
         headers: {
@@ -120,10 +130,32 @@ const ProductsContextProvider = ({ children }) => {
       console.log(err);
     }
   }
+  async function updateProduct(id, editedProduct, navigate) {
+    try {
+      const tokens = JSON.parse(localStorage.getItem("tokens"));
+      // config
+      const Authorization = `Bearer ${tokens.access}`;
+      const config = {
+        headers: {
+          Authorization,
+        },
+      };
+      const res = await axios.patch(
+        `${API}/products/${id}/`,
+        editedProduct,
+        config
+      );
+      navigate("/products");
+      getProducts();
+    } catch (err) {
+      console.log(err);
+    }
+  }
   return (
     <productsContext.Provider
       value={{
         products: state.products,
+        pages: state.pages,
         categories: state.categories,
         oneProduct: state.oneProduct,
         getProducts,
@@ -131,6 +163,7 @@ const ProductsContextProvider = ({ children }) => {
         createProduct,
         deleteProduct,
         getOneProduct,
+        updateProduct,
       }}>
       {children}
     </productsContext.Provider>

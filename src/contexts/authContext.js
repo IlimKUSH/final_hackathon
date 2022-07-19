@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 export const authContext = React.createContext();
-const API = "https://evening-ravine-58086.herokuapp.com";
+const API = "https://shielded-eyrie-90268.herokuapp.com";
 const AuthContextProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState(false);
   const [error, setError] = useState(false);
