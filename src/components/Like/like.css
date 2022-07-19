@@ -1,0 +1,14 @@
+.App-intro {
+  display: flex;
+  justify-content: space-evenly;
+}
+.App-title {
+  text-align: center;
+  color: orange;
+}
+.like-button {
+  color: chocolate;
+}
+.dislike-button {
+  color: chocolate;
+}
