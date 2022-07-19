@@ -86,7 +86,6 @@ export default function Cart() {
                   <IconButton onClick={() => deleteFromCart(row.item.id)}>
                     <DeleteIcon />
                   </IconButton>
-
                   <IconButton
                     onClick={() => navigate(`/details/${row.item.id}`)}>
                     <InfoIcon />

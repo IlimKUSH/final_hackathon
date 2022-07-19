@@ -53,27 +53,29 @@ import { productsContext } from "../../contexts/productsContext";
 import ProductsCard from "../ProductsCard/ProductsCard";
 
 const ProductsList = () => {
-  const { getProducts, products } = useContext(productsContext);
+  const { getProducts, products, pages } = useContext(productsContext);
   const [searchParams, setSearchParams] = useSearchParams();
+  const [currentPage, setCurrentPage] = useState(1);
   useEffect(() => {
     getProducts();
   }, []);
   useEffect(() => {
     getProducts();
   }, [searchParams]);
-  // console.log(products);
+  useEffect(() => {
+    setSearchParams({
+      page: currentPage,
+    });
+  }, [currentPage]);
+  console.log(products);
   return (
     <div className="container">
-      <div
-        display={"flex"}
-        flexWrap={"wrap"}
-        justifyContent={"center"}
-        alignItems={"start"}>
+      <div>
         {products.map(item => (
           <ProductsCard key={item.id} item={item} />
         ))}
       </div>
-      <div display={"flex"} justifyContent={"center"}>
+      <div>
         {/* <Pagination
           page={currentPage}
           onChange={(e, page) => setCurrentPage(page)}

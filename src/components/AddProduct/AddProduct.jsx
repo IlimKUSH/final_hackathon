@@ -12,7 +12,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { productsContext } from "../../contexts/productsContext";
 
-const AddProduct = ({ item }) => {
+const AddProduct = () => {
   const navigate = useNavigate();
   const { getCategories, categories, createProduct } =
     useContext(productsContext);
@@ -34,6 +34,7 @@ const AddProduct = ({ item }) => {
     newProduct.append("image", image);
     createProduct(newProduct, navigate);
   }
+  console.log(name, description, price, category, image);
   // console.log(category);
   return (
     <div className="container">
@@ -59,12 +60,8 @@ const AddProduct = ({ item }) => {
         />
         <select value={category} onChange={e => setCategory(e.target.value)}>
           {categories.map(item => (
-            <option key={item.id}>{item.name}</option>
+            <option>{item.name}</option>
           ))}
-          {/* <option value={category} onChange={e => setCategory(e.target.value)}>
-            Пункт 1
-          </option>
-          <option>Пункт 2</option> */}
         </select>
         <IconButton
           color="primary"
