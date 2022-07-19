@@ -6,7 +6,6 @@
 }
 body {
   background: #131218;
-  padding: 0 10px 0 10px;
 }
 .container {
   max-width: 1100px;
@@ -36,5 +35,8 @@ h6 {
   }
   .header__ftrs > img:first-child {
     margin-right: 15px;
+  }
+  body {
+    padding: 0 10px 0 10px;
   }
 }
