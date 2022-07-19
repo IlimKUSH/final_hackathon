@@ -286,19 +286,16 @@ a:-webkit-any-link {
 
 @media all and (max-width: 950px) {
   .we-it-w {
-    display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-
-    @media all and (max-width: 980px) {
-      .we-it-w {
-        display: flex;
-        flex-wrap: wrap;
-      }
-      .block {
-        display: flex;
-        flex-wrap: wrap;
-      }
-    }
+  }
+  .where-w {
+    max-width: 800px;
+  }
+}
+@media all and (max-width: 650px) {
+  .contain_2 {
+    flex-wrap: wrap;
   }
 }
