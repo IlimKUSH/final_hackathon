@@ -15,14 +15,16 @@ function App() {
   return (
     <AuthContextProvider>
       <ProductsContextProvider>
-        <CartContextProvider>
-          <BrowserRouter>
-            <HeaderUp />
-            {/* <HeaderDown /> */}
-            <Routing />
-            <Footer1 />
-          </BrowserRouter>
-        </CartContextProvider>
+        {/* <FavContextProvider> */}
+        {/* <CartContextProvider> */}
+        <BrowserRouter>
+          <HeaderUp />
+          {/* <HeaderDown /> */}
+          <Routing />
+          <Footer1 />
+        </BrowserRouter>
+        {/* </CartContextProvider> */}
+        {/* </FavContextProvider> */}
       </ProductsContextProvider>
     </AuthContextProvider>
   );
