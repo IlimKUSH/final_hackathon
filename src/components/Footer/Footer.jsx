@@ -113,30 +113,15 @@ const Footer = () => {
             <p>Гарантия</p>
             <p>Доставка</p>
           </div>
-
           <div>
             <p>УСЛУГИ</p>
             <p style={{ marginTop: "11px" }}>Ремонт</p>
             <p>Онлайн подбор</p>
             <p>Обучение</p>
             <p>Комиссионка</p>
-
-          <p className="footer_so">СПОСОБЫ ОПЛАТЫ</p>
-          <div className="foot-pay-row">
-            <a href="#" className="foot-pay-img-w">
-              <img src={ImageVisa} />
-            </a>
-            <a href="#" className="foot-pay-img-w">
-              <img src={ImageVisa1} />
-            </a>
-            <a href="#" className="foot-pay-img-w">
-              <img src={ImagePp} />
-            </a>
-            <a href="#" className="foot-pay-img-w">
-              <img src={ImageIpay} />
-            </a>
           </div>
         </div>
+
         <img className="image_inst" src={ImageInst} alt="" />
       </div>
     </div>

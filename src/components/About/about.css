@@ -284,21 +284,21 @@ a:-webkit-any-link {
   padding-right: 25px;
 }
 
-<<<<<<< HEAD
 @media all and (max-width: 950px) {
   .we-it-w {
     display: flex;
     flex-direction: column;
     align-items: center;
-=======
-@media all and (max-width: 980px) {
-  .we-it-w {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .block {
-    display: flex;
-    flex-wrap: wrap;
->>>>>>> 6d3faa445d0608f8e7a3049294d37ca104a8aec2
+
+    @media all and (max-width: 980px) {
+      .we-it-w {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .block {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
   }
 }

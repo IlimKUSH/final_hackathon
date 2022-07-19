@@ -36,11 +36,9 @@ const About = () => {
           </h2>
           <div className="we-w">
             <div className="we-it-w">
-<<<<<<< HEAD
               <div className="we-it">
-=======
-              <a href="#" className="we-it">
->>>>>>> 6d3faa445d0608f8e7a3049294d37ca104a8aec2
+                {/* <a href="#" className="we-it"> */}
+
                 <div className="we-img-w">
                   <img
                     src={Vsevlod}
