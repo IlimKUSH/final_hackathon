@@ -14,20 +14,16 @@ import FavContextProvider from "./contexts/favContext";
 function App() {
   return (
     <AuthContextProvider>
-      {/* <ProductsContextProvider> */}
-      {/* <TestimonialsContextProvider> */}
-      <FavContextProvider>
-        <CartContextProvider>
-          <BrowserRouter>
-            <HeaderUp />
-            {/* <HeaderDown /> */}
-            <Routing />
-            <Footer />
-          </BrowserRouter>
-        </CartContextProvider>
-      </FavContextProvider>
-      {/* </TestimonialsContextProvider> */}
-      {/* </ProductsContextProvider> */}
+      <ProductsContextProvider>
+        {/* <CartContextProvider> */}
+        <BrowserRouter>
+          <HeaderUp />
+          {/* <HeaderDown /> */}
+          <Routing />
+          <Footer />
+        </BrowserRouter>
+        {/* </CartContextProvider> */}
+      </ProductsContextProvider>
     </AuthContextProvider>
   );
 }

@@ -1,4 +1,7 @@
 // import * as React from "react";
+
+// import { useNavigate } from "react-router-dom";
+
 // import { styled } from "@mui/material/styles";
 // import Card from "@mui/material/Card";
 // import CardHeader from "@mui/material/CardHeader";
@@ -11,12 +14,14 @@
 // import Typography from "@mui/material/Typography";
 // import { red } from "@mui/material/colors";
 // import FavoriteIcon from "@mui/icons-material/Favorite";
+// import ShareIcon from "@mui/icons-material/Share";
 // import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 // import MoreVertIcon from "@mui/icons-material/MoreVert";
 // import EditIcon from "@mui/icons-material/Edit";
 // import DeleteIcon from "@mui/icons-material/Delete";
 // import BookmarkIcon from "@mui/icons-material/Bookmark";
 // import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
+// import { productsContext } from "../../contexts/productsContext";
 
 // const ExpandMore = styled(props => {
 //   const { expand, ...other } = props;
@@ -30,14 +35,18 @@
 // }));
 
 // export default function ProductsCard({ item }) {
+//   const navigate = useNavigate();
+//   const { deleteProduct, toggleLike, toggleFavorite } =
+//     React.useContext(productsContext);
 //   const [expanded, setExpanded] = React.useState(false);
 
 //   const handleExpandClick = () => {
 //     setExpanded(!expanded);
 //   };
+//   // console.log(item);
 
 //   return (
-//     <Card sx={{ maxWidth: 345, margin: "20px" }}>
+//     <Card sx={{ maxWidth: 345, margin: " 20px" }}>
 //       <CardHeader
 //         avatar={
 //           <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
@@ -45,7 +54,7 @@
 //           </Avatar>
 //         }
 //         action={
-//           <IconButton aria-label="settings">
+//           <IconButton onClick={() => navigate(`/products/${item.id}`)}>
 //             <MoreVertIcon />
 //           </IconButton>
 //         }
@@ -60,32 +69,27 @@
 //       <CardContent>
 //         <Typography variant="body2" color="text.secondary">
 //           Title: {item.title} <br />
-//           Price: {item.price} $ <br />
+//           Price: ${item.price} <br />
 //           Category: {item.category.title} <br />
 //           Reviews: {item.reviews.length} <br />
 //           Likes: {item.likes} <br />
 //         </Typography>
 //       </CardContent>
 //       <CardActions disableSpacing>
-//         {item.favorite_by_user ? (
-//           <IconButton>
-//             <BookmarkIcon />
-//           </IconButton>
-//         ) : (
-//           <IconButton>
-//             <BookmarkBorderIcon />
-//           </IconButton>
-//         )}
+//         <IconButton onClick={() => toggleFavorite(item.id)}>
+//           {item.favorite_by_user ? <BookmarkIcon /> : <BookmarkBorderIcon />}
+//         </IconButton>
 
-//         <IconButton>
-//           <FavoriteIcon />
+//         <IconButton onClick={() => toggleLike(item.id)}>
+//           {item.likes}
+//           <FavoriteIcon color={item.liked_by_user ? "error" : "black"} />
 //         </IconButton>
 //         {item.is_author ? (
 //           <>
-//             <IconButton>
+//             <IconButton onClick={() => deleteProduct(item.id)}>
 //               <DeleteIcon />
 //             </IconButton>
-//             <IconButton>
+//             <IconButton onClick={() => navigate(`/edit/${item.id}`)}>
 //               <EditIcon />
 //             </IconButton>
 //           </>
@@ -107,3 +111,14 @@
 //     </Card>
 //   );
 // }
+
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import { productsContext } from "../../contexts/productsContext";
+
+export default function ProductsCard({ item }) {
+  const navigate = useNavigate();
+  const { deleteProduct } = React.useContext(productsContext);
+  console.log(item);
+  return <div className="container"></div>;
+}
