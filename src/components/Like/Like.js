@@ -41,10 +41,10 @@ class Like extends Component {
         </header>
         <p className="App-intro">
           <button className="like-button" onClick={this.toggleLike}>
-            Like | {this.state.like.count}
+            Like {this.state.like.count}
           </button>
           <button className="dislike-button" onClick={this.toggleDislike}>
-            Dislike | {this.state.dislike.count}
+            Dislike {this.state.dislike.count}
           </button>
         </p>
       </div>
