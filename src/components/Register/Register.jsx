@@ -100,6 +100,7 @@ import { authContext } from "../../contexts/authContext";
 import { useNavigate } from "react-router-dom";
 import Loader from "../Loader/Loader";
 import "./register.css";
+import HeaderDown from "../Header/HeaderDown";
 
 const Register = () => {
   const { handleRegister, error, setError, loading } = useContext(authContext);
@@ -136,10 +137,11 @@ const Register = () => {
   }
   return (
     <div className="register">
-      <div className="container">
-        <div className="register__content">
-          <h5>Register</h5>
+      <HeaderDown />
 
+      <div className="container">
+        <h2 className="register__title">Регистрация</h2>
+        <div className="login__content">
           {error ? (
             <Box>
               {error.map((item, index) => (
@@ -150,27 +152,28 @@ const Register = () => {
             </Box>
           ) : null}
 
-          <input
-            value={email}
-            onChange={e => setEmail(e.target.value)}
-            placeholder={"email"}
-          />
-          <input
-            value={name}
-            onChange={e => setName(e.target.value)}
-            placeholder={"name"}
-          />
-          <input
-            value={password}
-            onChange={e => setPassword(e.target.value)}
-            label="Password"
-          />
+          <p>
+            Email <span>*</span>
+          </p>
+          <input value={email} onChange={e => setEmail(e.target.value)} />
+          <p>
+            Имя <span>*</span>
+          </p>
+          <input value={name} onChange={e => setName(e.target.value)} />
+          <p>
+            Пароль <span>*</span>
+          </p>
+          <input value={password} onChange={e => setPassword(e.target.value)} />
+          <p>
+            Подтверждение пароля <span>*</span>
+          </p>
           <input
             value={passwordConfirm}
             onChange={e => setPasswordConfirm(e.target.value)}
-            label="Password confirmation"
           />
-          <button onClick={handleSave}>Register</button>
+          <button className="register__btn" onClick={handleSave}>
+            Зарегистрироваться
+          </button>
         </div>
       </div>
     </div>

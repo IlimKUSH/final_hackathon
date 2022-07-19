@@ -8,7 +8,6 @@ import Fav from "../../images/fav.svg";
 import Swiper from "../Swiper/Swiper";
 import { useNavigate } from "react-router-dom";
 import { authContext } from "../../contexts/authContext";
-import { Box, Button, Typography } from "@mui/material";
 import Loader from "../Loader/Loader";
 
 const Header = () => {
@@ -52,39 +51,11 @@ const Header = () => {
               <p onClick={() => navigate("/delivery")}>ДОСТАВКА</p>
               <p onClick={() => navigate("/contacts")}>КОНТАКТЫ</p>
               {currentUser ? (
-                <Box>
-                  <Button
-                    variant="contained"
-                    onClick={() => navigate("/products")}>
-                    Products
-                  </Button>
-                  <Button variant="contained" onClick={() => navigate("/add")}>
-                    Add product
-                  </Button>
-                  <Button
-                    variant="contained"
-                    onClick={() => navigate("/favorites")}>
-                    Favorites
-                  </Button>
-                  <Typography variant="h6">{currentUser}</Typography>
-                  <Button
-                    onClick={() => handleLogout(navigate)}
-                    variant="outlined">
-                    Logout
-                  </Button>
-                </Box>
-              ) : (
-                <Box>
-                  <Button onClick={() => navigate("/login")} variant="outlined">
-                    Login
-                  </Button>
-                  <Button
-                    onClick={() => navigate("/register")}
-                    variant="outlined">
-                    Register
-                  </Button>
-                </Box>
-              )}
+                <div className="nav__products">
+                  <p onClick={() => navigate("/products")}>КАТАЛОГ</p>
+                  <p onClick={() => navigate("/add")}>ДОБАВИТЬ ПРОДУКТ</p>
+                </div>
+              ) : null}
             </div>
           </nav>
         </div>

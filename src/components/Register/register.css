@@ -1,5 +1,28 @@
+.register__title {
+  text-align: left;
+  display: inherit;
+}
 .register__content {
-  background-color: #cc7408;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+}
+
+.register__btn {
+  background: #ea8305;
+  border: 2px solid rgba(255, 255, 255, 0.13);
+  border-radius: 5px;
+  color: white;
+  margin-top: 25px;
+  font-size: 24px;
+  padding: 6px 50px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.register__btn:hover {
+  background: #fba235;
+}
+
+.login__content > p {
+  margin: 20px 0 5px 0;
 }

@@ -4,7 +4,7 @@ import "./about.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 //! IMAGES
-import Vsevlod from "../../images/vsevlod.png";
+import Vsevlod from "../../images/vsevlod.jpeg";
 import Valera from "../../images/valera.png";
 import Gitar from "../../images/gitar.png";
 import Aleksey from "../../images/aleksey.png";
@@ -36,12 +36,21 @@ const About = () => {
           </h2>
           <div className="we-w">
             <div className="we-it-w">
-              <a href="#" className="we-it">
+              <div className="we-it">
+                {/* <a href="#" className="we-it"> */}
+
                 <div className="we-img-w">
-                  <img src={Vsevlod} className="we-img" />
+                  <img
+                    src={Vsevlod}
+                    className="we-img"
+                    style={{
+                      width: "300px",
+                      height: "400px",
+                    }}
+                  />
                   <div className="block">
                     <div className="block-child">
-                      <div className="we-img-ab-act-txt-1">Всеволод </div>
+                      <div className="we-img-ab-act-txt-1">Эрмек </div>
                       <p>
                         <span className="block-text">
                           Главный поборник прав и морали, знаком с певицей
@@ -54,8 +63,8 @@ const About = () => {
                     </div>
                   </div>
                 </div>
-                <div className="we-txt">Всеволод</div>
-              </a>
+                <div className="we-txt">Эрмек</div>
+              </div>
 
               <a href="#" className="we-it">
                 <div className="we-img-w">

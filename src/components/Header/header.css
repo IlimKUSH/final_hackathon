@@ -8,7 +8,6 @@
 .header__socials {
   display: flex;
   align-items: center;
-  margin-left: 90px;
 }
 .header__socials > img {
   margin-left: 20px;
@@ -56,6 +55,42 @@
   display: flex;
 }
 
+.nav__products {
+  display: flex;
+}
+
+.nav__products > p {
+  color: #ffffff;
+  margin: 0 5px 0 5px;
+  cursor: pointer;
+}
+.user {
+  display: flex;
+  align-items: center;
+}
+.user > p {
+  margin-right: 8px;
+}
+
+.btn__login {
+  margin-right: 8px;
+}
+.btn__login,
+.btn__register {
+  background: #ea8305;
+  border: 2px solid rgba(255, 255, 255, 0.13);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: #cfd8dc;
+  padding: 2px;
+}
+.btn__login:hover,
+.btn__register:hover {
+  background: #fba235;
+  color: #fff;
+}
+
 .header-down__content {
   display: flex;
   justify-content: space-between;
@@ -68,6 +103,7 @@
 .nav__content > p {
   color: #ffffff;
   margin: 0 5px 0 5px;
+  cursor: pointer;
 }
 
 .menu__box-item {
