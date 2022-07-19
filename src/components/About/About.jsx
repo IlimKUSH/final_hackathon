@@ -1,6 +1,7 @@
 import React from "react";
 import HeaderDown from "../Header/HeaderDown";
 import "./about.css";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 //! IMAGES
 import Vsevlod from "../../images/vsevlod.jpeg";
@@ -11,6 +12,12 @@ import Maks from "../../images/maks.png";
 import Andrey from "../../images/andrey.png";
 import Vk from "../../images/vkontakte.svg";
 import YouTube from "../../images/youtub.svg";
+import ShopIn from "../../images/shop-in.png";
+import ShopOut from "../../images/shop-out.png";
+import ShopLeft from "../../images/shop-left.png";
+
+import { A11y, Navigation, Pagination } from "swiper";
+import { Container } from "@mui/system";
 //! IMAGES
 
 // import { Swiper, SwiperSlide } from "swiper/react";
@@ -29,7 +36,11 @@ const About = () => {
           </h2>
           <div className="we-w">
             <div className="we-it-w">
+<<<<<<< HEAD
               <div className="we-it">
+=======
+              <a href="#" className="we-it">
+>>>>>>> 6d3faa445d0608f8e7a3049294d37ca104a8aec2
                 <div className="we-img-w">
                   <img
                     src={Vsevlod}
@@ -57,7 +68,7 @@ const About = () => {
                 <div className="we-txt">Эрмек</div>
               </div>
 
-              <a href="javascript:void(0);" className="we-it">
+              <a href="#" className="we-it">
                 <div className="we-img-w">
                   <img src={Valera} className="we-img" />
                   <div className="block">
@@ -78,7 +89,7 @@ const About = () => {
                 <div className="we-txt">Валерий</div>
               </a>
 
-              <a href="javascript:void(0);" className="we-it">
+              <a href="#" className="we-it">
                 <div className="we-img-w">
                   <img src={Andrey} className="we-img" />
                   <div className="block">
@@ -98,7 +109,7 @@ const About = () => {
                 <div className="we-txt">Андрей</div>
               </a>
 
-              <a href="javascript:void(0);" className="we-it">
+              <a href="#" className="we-it">
                 <div className="we-img-w">
                   <img src={Aleksey} className="we-img" />
                   <div className="block">
@@ -120,7 +131,7 @@ const About = () => {
                 <div className="we-txt">Алексей</div>
               </a>
 
-              <a href="javascript:void(0);" className="we-it">
+              <a href="#" className="we-it">
                 <div className="we-img-w">
                   <img src={Gitar} className="we-img" />
                   <div className="block">
@@ -140,7 +151,7 @@ const About = () => {
                 <div className="we-txt">Алексей</div>
               </a>
 
-              <a href="javascript:void(0);" className="we-it">
+              <a href="#" className="we-it">
                 <div className="we-img-w">
                   <img src={Maks} className="we-img" />
                   <div className="block">
@@ -161,9 +172,8 @@ const About = () => {
             </div>
           </div>
         </div>
-        //!2
         <div className="wehere">
-          <div className="contain">
+          <div className="contain_2">
             <div className="wehere-w">
               <div className="wehere-l">
                 <div className="service-tit">Мы здесь есть</div>
@@ -255,6 +265,49 @@ const About = () => {
             </div>
           </div>
         </div>
+        <Container>
+          <p
+            style={{
+              textAlign: "center",
+              color: "white",
+              fontSize: "36px",
+              marginTop: "40px",
+            }}>
+            Как мы выглядим со стороны
+          </p>
+          <Swiper
+            style={{
+              display: "flex",
+              justifyContent: "space-evenly",
+              marginTop: "40px",
+            }}
+            className="swiper__wrapper-2"
+            modules={[Navigation, Pagination, A11y]}
+            slidesPerView={3}
+            pagination={{ clickable: true }}
+            navigation>
+            <SwiperSlide>
+              <div className="famous__card">
+                <img src={ShopIn} alt="ukulele" />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="famous__card">
+                <img src={ShopOut} alt="ukulele" />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="famous__card">
+                <img src={ShopLeft} alt="ukulele" />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="famous__card">
+                <img src={ShopIn} alt="ukulele" />
+              </div>
+            </SwiperSlide>
+          </Swiper>
+        </Container>
       </div>
     </>
   );

@@ -34,12 +34,12 @@
   display: flex;
 }
 .header__search > input {
-  background-color: inherit;
-  border: none;
-  font-size: 14px;
-  line-height: 14px;
-  color: #ffffff;
-  margin-left: 10px;
+  background-color: inherit !important;
+  border: none !important;
+  font-size: 14px !important;
+  line-height: 14px !important;
+  color: #ffffff !important;
+  margin-left: 10px !important;
 }
 .header__search > input::-webkit-input-placeholder {
   color: #ffffff;
@@ -68,4 +68,120 @@
 .nav__content > p {
   color: #ffffff;
   margin: 0 5px 0 5px;
+}
+
+.menu__box-item {
+  margin-top: 50px;
+}
+.menu__box > img {
+  width: 100px;
+  height: 80px;
+}
+/* скрываем чекбокс */
+#menu__toggle {
+  opacity: 0;
+}
+/* стилизуем кнопку */
+.menu__btn {
+  display: none;
+  position: fixed;
+  top: 102px;
+  right: 15px;
+  width: 20px;
+  height: 12px;
+  cursor: pointer;
+  z-index: 15;
+}
+/* добавляем "гамбургер" */
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #616161;
+  background: #ffffff;
+  border-radius: 2px;
+}
+.menu__btn > span::before {
+  content: "";
+  top: -8px;
+}
+.menu__btn > span::after {
+  content: "";
+  top: 8px;
+}
+
+/* контейнер меню */
+.menu__box {
+  display: block;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 5px;
+  background-color: #131218;
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+/* элементы меню */
+.menu__item {
+  display: block;
+  padding: 12px 0;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+}
+.menu__item:hover {
+  background-color: #cfd8dc;
+}
+
+#menu__toggle:checked ~ .menu__btn > span {
+  transform: rotate(45deg);
+  margin-top: -60px;
+}
+#menu__toggle:checked ~ .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+#menu__toggle:checked ~ .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box {
+  visibility: visible;
+  left: 0;
+}
+
+@media all and (max-width: 865px) {
+  .header__nav {
+    display: none;
+  }
+  .menu__btn {
+    display: flex;
+  }
+  .header__ftrs > img:first-child {
+    margin-right: 15px;
+  }
+}
+
+@media all and (max-width: 640px) {
+  .header__socials {
+    display: none;
+  }
+}
+@media all and (max-width: 480px) {
+  .header__search > input {
+    display: none;
+  }
+  .header-down__content {
+    justify-content: space-around;
+  }
+  .header__ftrs > img {
+    margin-right: 10px !important;
+  }
 }

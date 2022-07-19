@@ -1,10 +1,14 @@
 import React from "react";
 import HeaderDown from "../Header/HeaderDown";
 import Star from "../../images/star.svg";
+import Box from "@mui/material/Box";
+import Rating from "@mui/material/Rating";
+import Typography from "@mui/material/Typography";
 
 import "./testimonials.css";
 
 const Testimonials = () => {
+  const [value, setValue] = React.useState(2);
   return (
     <div>
       <HeaderDown />
@@ -143,7 +147,6 @@ const Testimonials = () => {
             placeholder="Ваше имя..."
             name="user_name"
             id="ec-user_name-resource-96"
-            value=""
             required=""
           />
           <input
@@ -152,7 +155,6 @@ const Testimonials = () => {
             placeholder="Е-mail..."
             name="user_email"
             id="ec-user_email-resource-96"
-            value=""
             required=""
           />
           <textarea
@@ -166,27 +168,13 @@ const Testimonials = () => {
             <div className="addmark-cap">Оценка</div>
 
             <div className="addmark-stars">
-              <input
-                type="hidden"
-                name="rating"
-                id="ec-rating-resource-96"
-                value=""
+              <Rating
+                name="simple-controlled"
+                value={value}
+                onChange={(event, newValue) => {
+                  setValue(newValue);
+                }}
               />
-              <div
-                className="ec-rating ec-clearfix"
-                data-storage-id="ec-rating-resource-96">
-                <div className="ec-rating-stars">
-                  <span data-rating="1" data-description="Плохо"></span>
-                  <span
-                    data-rating="2"
-                    data-description="Есть и получше"></span>
-                  <span data-rating="3" data-description="Средне"></span>
-                  <span data-rating="4" data-description="Хорошо"></span>
-                  <span
-                    data-rating="5"
-                    data-description="Отлично! Рекомендую!"></span>
-                </div>
-              </div>
             </div>
           </div>
           <div className="revform-bot">

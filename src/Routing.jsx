@@ -1,5 +1,7 @@
-import React from "react";
-import { Route, Routes } from "react-router-dom";
+
+import React, { useContext } from "react";
+import { Navigate, Route, Routes } from "react-router-dom";
+
 
 import About from "./components/About/About";
 import AddProduct from "./components/AddProduct/AddProduct";
@@ -11,6 +13,7 @@ import Favorites from "./components/Favorites/Favorites";
 import Login from "./components/Login/Login";
 import Main from "./components/Main/Main";
 import Payment from "./components/Payment/Payment";
+import PaymentSucces from "./components/PaymentSucces/PaymentSucces";
 import ProductsCard from "./components/ProductsCard/ProductsCard";
 import ProductsList from "./components/ProductsList/ProductsList";
 import Register from "./components/Register/Register";
@@ -19,7 +22,7 @@ import Testimonials from "./components/Testimonials/Testimonials";
 import { authContext } from "./contexts/authContext";
 
 const Routing = () => {
-  // const { currentUser } = useContext(authContext);
+  const { currentUser, loading } = useContext(authContext);
   return (
     <Routes>
       <Route path="/" element={<Main />} />
@@ -28,38 +31,34 @@ const Routing = () => {
       <Route path="/about" element={<About />} />
       <Route path="/testimonials" element={<Testimonials />} />
       <Route path="/payment" element={<Payment />} />
-      <Route path="/favourites" element={<Favorites />} />
+
+      <Route path="/favorites" element={<Favorites />} />
+
+      <Route path="PaymentSucces" element={<PaymentSucces />} />
+
       <Route path="/catalog" element={<Catalog />} />
-      <Route path="/login" element={<Login />} />
-      <Route path="/register" element={<Register />} />
-      <Route path="/register-success" element={<RegisterSuccess />} />
+
       <Route path="/cart" element={<Cart />} />
+
       <Route path="/products" element={<ProductsList />} />
       <Route path="/add" element={<AddProduct />} />
-      
       <Route path="/contacts" element={<Contacts />} />
       <Route path="/delivery" element={<Delivery />} />
-      {/* <Route path="/login" element={<Login />} /> */}
-      {/* <Route path="/register" element={<Register />} /> */}
-      {/* <Route path="/register-success" element={<RegissterSuccess />} /> */}
-      {/* <Route
+      {/* <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
+      <Route path="/register-success" element={<RegisterSuccess />} /> */}
+      <Route
         path="/login"
         element={currentUser ? <Navigate to="/products" replace /> : <Login />}
       />
       <Route
         path="/register"
-        element={
-          currentUser ? <Navigate to="/products" replace /> : <Register />
-        }
+        element={currentUser ? <Navigate to="/" replace /> : <Register />}
       />
       <Route
         path="/register-success"
         element={
-          currentUser ? (
-            <Navigate to="/products" replace />
-          ) : (
-            <RegisterSuccess />
-          )
+          currentUser ? <Navigate to="/" replace /> : <RegisterSuccess />
         }
       />
       <Route
@@ -73,7 +72,7 @@ const Routing = () => {
         element={
           currentUser ? <AddProduct /> : <Navigate to="/login" replace />
         }
-      /> */}
+      />
     </Routes>
   );
 };

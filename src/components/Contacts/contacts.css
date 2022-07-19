@@ -6,22 +6,6 @@
 main {
   flex-grow: 1;
 }
-
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-menu,
-nav,
-section,
-summary {
-  display: block;
-}
 .contain {
   margin-left: auto;
   margin-right: auto;
@@ -287,6 +271,9 @@ p {
   .contain {
     max-width: 750px;
   }
+  .hcontacts-map-w {
+    width: 100vw;
+  }
 }
 @media only screen and (max-width: 1199px) {
   .contain {
@@ -318,12 +305,6 @@ p {
   }
 }
 
-@media only screen and (max-width: 991px) {
-  .hcontacts-r {
-    padding-left: 0;
-    margin-top: 10px;
-  }
-}
 @media only screen and (max-width: 991px) {
   .hcontacts-item-col,
   .hcontacts-item-col-2 {

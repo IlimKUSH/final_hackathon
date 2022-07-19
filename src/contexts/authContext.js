@@ -1,10 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
-
 export const authContext = React.createContext();
-
-const API = "https://backend-for-fs-makers.herokuapp.com/api/v1";
-
+const API = "https://evening-ravine-58086.herokuapp.com";
 const AuthContextProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState(false);
   const [error, setError] = useState(false);
@@ -12,11 +9,11 @@ const AuthContextProvider = ({ children }) => {
   async function handleRegister(formData, navigate) {
     setLoading(true);
     try {
-      const res = await axios.post(`${API}/account/register/`, formData);
+      const res = await axios.post(`${API}/account/registration/`, formData);
       // console.log(res);
       navigate("/register-success");
-    } catch (error) {
-      setError(Object.values(error.response.data).flat(2));
+    } catch (err) {
+      setError(Object.values(err.response.data).flat(2));
     } finally {
       setLoading(false);
     }
@@ -47,7 +44,7 @@ const AuthContextProvider = ({ children }) => {
         },
       };
       const res = await axios.post(
-        `${API}/account/token/refresh/`,
+        `${API}/account/refresh/`,
         {
           refresh: tokens.refresh,
         },
@@ -80,8 +77,8 @@ const AuthContextProvider = ({ children }) => {
       value={{
         currentUser,
         error,
-        setError,
         loading,
+        setError,
         handleRegister,
         handleLogin,
         checkAuth,
