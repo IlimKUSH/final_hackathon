@@ -15,6 +15,7 @@ function App() {
   return (
     <AuthContextProvider>
       <ProductsContextProvider>
+        {/* <FavContextProvider> */}
         {/* <CartContextProvider> */}
         <BrowserRouter>
           <HeaderUp />
@@ -23,6 +24,7 @@ function App() {
           <Footer1 />
         </BrowserRouter>
         {/* </CartContextProvider> */}
+        {/* </FavContextProvider> */}
       </ProductsContextProvider>
     </AuthContextProvider>
   );

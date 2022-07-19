@@ -14,6 +14,9 @@ import Login from "./components/Login/Login";
 import Main from "./components/Main/Main";
 import Payment from "./components/Payment/Payment";
 import PaymentSucces from "./components/PaymentSucces/PaymentSucces";
+
+import Like from "./components/Like/Like";
+
 import ProductsList from "./components/ProductsList/ProductsList";
 import Register from "./components/Register/Register";
 import RegisterSuccess from "./components/RegisterSuccess/RegisterSuccess";
@@ -30,6 +33,7 @@ const Routing = () => {
       <Route path="/about" element={<About />} />
       <Route path="/testimonials" element={<Testimonials />} />
       <Route path="/payment" element={<Payment />} />
+      <Route path="/like" element={<Like />} />
 
       <Route path="/favorites" element={<Favorites />} />
 

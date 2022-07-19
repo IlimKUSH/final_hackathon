@@ -5,7 +5,7 @@ import "react-credit-cards/es/styles-compiled.css";
 import HeaderDown from "../Header/HeaderDown";
 import { color } from "@mui/system";
 import { TextField } from "@mui/material";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default class PaymentForm extends React.Component {
   state = {
@@ -31,11 +31,18 @@ export default class PaymentForm extends React.Component {
       <div>
         <HeaderDown />
         <div className="contained">
+          <div style={{ display: "flex" }}>
+            <Link to={"/"}>
+              <p className="bread">Главная</p>
+            </Link>
+            <p>/</p>
+            <p>Оформление заказа</p>
+          </div>
+
           <div style={{ display: "flex", justifyContent: "space-between" }}>
             <div className="main">
               <h1
                 style={{
-                  position: "absolute",
                   width: "637px",
                   height: "41px",
                   left: "101px",

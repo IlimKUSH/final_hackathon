@@ -9,13 +9,14 @@ import Paper from "@mui/material/Paper";
 import { Box, Container, IconButton, Typography } from "@mui/material";
 
 import Loader from "../Loader/Loader";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { cartContext } from "../../contexts/cartContext";
 import "./cart.css";
 import RemoveIcon from "@mui/icons-material/Remove";
 import AddIcon from "@mui/icons-material/Add";
 import DeleteIcon from "@mui/icons-material/Delete";
 import InfoIcon from "@mui/icons-material/Info";
+
 
 export default function Cart() {
   const navigate = useNavigate();
@@ -27,6 +28,16 @@ export default function Cart() {
   console.log(cart);
   return cart ? (
     <Container>
+      <div className="bread">
+        <Link to={"/"}>
+          <p>главная</p>
+        </Link>
+        <p>/</p>
+        <Link to={"/cart"}>
+          <p>корзина</p>
+        </Link>
+      </div>
+      <div style={{ height: "vh" }}></div>
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead>
@@ -34,18 +45,18 @@ export default function Cart() {
               style={{
                 backgroundColor: "#747164",
               }}>
-              <TableCell style={{ color: "white" }}>Product</TableCell>
+              <TableCell style={{ color: "white" }}>Продукт</TableCell>
               <TableCell style={{ color: "white" }} align="right">
-                Price
+                Цена
               </TableCell>
               <TableCell style={{ color: "white" }} align="right">
-                Count
+                Количество
               </TableCell>
               <TableCell style={{ color: "white" }} align="right">
-                Subprice
+                Общая цена
               </TableCell>
               <TableCell style={{ color: "white" }} align="right">
-                Info
+                Информация
               </TableCell>
             </TableRow>
           </TableHead>
@@ -75,7 +86,6 @@ export default function Cart() {
                   <IconButton onClick={() => deleteFromCart(row.item.id)}>
                     <DeleteIcon />
                   </IconButton>
-
                   <IconButton
                     onClick={() => navigate(`/details/${row.item.id}`)}>
                     <InfoIcon />
@@ -88,7 +98,7 @@ export default function Cart() {
       </TableContainer>
       <Box>
         <Typography variant="h4" style={{ color: "white" }}>
-          Total price: {cart.totalPrice} som
+          Итоговая цена: {cart.totalPrice} сом
         </Typography>
       </Box>
     </Container>
