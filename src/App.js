@@ -6,9 +6,9 @@ import "./index.css";
 import ProductsContextProvider from "./contexts/productsContext";
 import CartContextProvider from "./contexts/cartContext";
 import AuthContextProvider from "./contexts/authContext";
-import Footer from "./components/Footer/Footer";
 import HeaderDown from "./components/Header/HeaderDown";
 import FavContextProvider from "./contexts/favContext";
+import Footer1 from "./components/Footer1/Footer1";
 // import TestimonialsContextProvider from "./contexts/testimonialsContext";
 
 function App() {
@@ -18,9 +18,9 @@ function App() {
         <CartContextProvider>
           <BrowserRouter>
             <HeaderUp />
-            <HeaderDown />
+            {/* <HeaderDown /> */}
             <Routing />
-            <Footer />
+            <Footer1 />
           </BrowserRouter>
         </CartContextProvider>
       </ProductsContextProvider>

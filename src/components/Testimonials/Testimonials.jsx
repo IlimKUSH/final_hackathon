@@ -1,9 +1,6 @@
 import React from "react";
 import HeaderDown from "../Header/HeaderDown";
-import Star from "../../images/star.svg";
-import Box from "@mui/material/Box";
 import Rating from "@mui/material/Rating";
-import Typography from "@mui/material/Typography";
 
 import "./testimonials.css";
 
