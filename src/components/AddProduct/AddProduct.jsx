@@ -1,16 +1,11 @@
 import { PhotoCamera } from "@mui/icons-material";
-import {
-  Button,
-  FormControl,
-  IconButton,
-  InputLabel,
-  MenuItem,
-  Select,
-  Typography,
-} from "@mui/material";
+import { IconButton, Typography } from "@mui/material";
 import React, { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { productsContext } from "../../contexts/productsContext";
+import HeaderDown from "../Header/HeaderDown";
+
+import "./addProduct.css";
 
 const AddProduct = () => {
   const navigate = useNavigate();
@@ -38,8 +33,9 @@ const AddProduct = () => {
   // console.log(category);
   return (
     <div className="container">
+      <HeaderDown />
       <div className="add">
-        <h6>Add product</h6>
+        <h6>Добавить продукт</h6>
         <input
           placeholder="name"
           type="text"
@@ -54,7 +50,7 @@ const AddProduct = () => {
         />
         <input
           placeholder="price"
-          type="text"
+          type="number"
           value={price}
           onChange={e => setPrice(e.target.value)}
         />
@@ -92,9 +88,9 @@ const AddProduct = () => {
           </Select>
         </FormControl> */}
 
-        <Button onClick={handleSave} variant="contained">
-          Save
-        </Button>
+        <button onClick={handleSave} variant="contained">
+          Сохранить
+        </button>
       </div>
     </div>
   );

@@ -1,14 +1,14 @@
+import { IconButton, Rating } from "@mui/material";
 
-import { CardMedia, IconButton } from "@mui/material";
-
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { productsContext } from "../../contexts/productsContext";
 import { cartContext } from "../../contexts/cartContext";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 
 export default function ProductCard({ item }) {
-  const { deleteProduct } = React.useContext(productsContext);
+  const { deleteProduct, getRating } = React.useContext(productsContext);
+  const [value, setValue] = React.useState("");
 
   const { addToCart, checkProductInCart } = React.useContext(cartContext);
   const navigate = useNavigate();
@@ -38,6 +38,13 @@ export default function ProductCard({ item }) {
               color={productState ? "secondary" : "primary"}
             />
           </IconButton>
+          <Rating
+            name="simple-controlled"
+            value={value}
+            onChange={(event, newValue) => {
+              setValue(newValue);
+            }}
+          />
         </div>
       </div>
     </div>
