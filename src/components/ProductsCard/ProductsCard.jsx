@@ -1,36 +1,53 @@
-import { CardMedia } from "@mui/material";
-import React from "react";
+import { IconButton, Rating } from "@mui/material";
+
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { productsContext } from "../../contexts/productsContext";
-import HeaderDown from "../Header/HeaderDown";
-import "./ProductCard.css";
+import { cartContext } from "../../contexts/cartContext";
+import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 
-export default function ProductsCard({ item }) {
+export default function ProductCard({ item }) {
+  const { deleteProduct, getRating } = React.useContext(productsContext);
+  const [value, setValue] = React.useState("");
+
+
+  const { addToCart, checkProductInCart } = React.useContext(cartContext);
   const navigate = useNavigate();
-  const { deleteProduct } = React.useContext(productsContext);
-  console.log(item);
+  const [productState, setProductState] = React.useState(
+    checkProductInCart(item.id)
+  );
+  // console.log(item);
+
   return (
-    <div>
-      <div style={{ display: "flex" }} className="products ">
-        <div className="container">
-          <div className="products_item">
-            <div className="products__content">
-              <img className="products_img" src={item.image} alt="qweqwe" />
-              <p style={{ fontSize: "14px", color: "white" }}>{item.name}</p>
-              <br />
-              <p style={{ fontSize: "24px", color: "white" }}>
-                {item.price} сом
-              </p>
-              <h3>{item.category}</h3>
-              <button onClick={() => deleteProduct(item.id)}>delete</button>
-              <button onClick={() => navigate(`/edit/${item.id}/`)}>
-                edit
-              </button>
-              <button onClick={() => navigate(`/products/${item.id}`)}>
-                details
-              </button>
-            </div>
-          </div>
+
+    <div className="products">
+      <div className="container">
+        <div className="products__content">
+          <img src={item.image} width={100} alt="qweqwe" />
+          <h3>{item.name}</h3>
+          <h3>{item.price} сом</h3>
+          <button onClick={() => deleteProduct(item.id)}>delete</button>
+          <button onClick={() => navigate(`/edit/${item.id}/`)}>edit</button>
+          <button onClick={() => navigate(`/products/${item.id}`)}>
+            details
+          </button>
+          <IconButton
+            onClick={() => {
+              addToCart(item);
+              setProductState(checkProductInCart(item.id));
+            }}>
+            <AddShoppingCartIcon
+              color={productState ? "secondary" : "primary"}
+            />
+          </IconButton>
+          <Rating
+            name="simple-controlled"
+            value={value}
+            onChange={(event, newValue) => {
+              setValue(newValue);
+            }}
+          />
+
         </div>
       </div>
     </div>
