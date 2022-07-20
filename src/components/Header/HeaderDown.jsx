@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 
 import "./header.css";
 
@@ -7,9 +7,16 @@ import Search from "../../images/search.svg";
 import Cart from "../../images/cart.svg";
 import Fav from "../../images/fav.svg";
 import { Link, useNavigate } from "react-router-dom";
+import { authContext } from "../../contexts/authContext";
 
 const HeaderDown = () => {
   const navigate = useNavigate();
+  const { currentUser, checkAuth } = useContext(authContext);
+  useEffect(() => {
+    if (localStorage.getItem("tokens")) {
+      checkAuth();
+    }
+  }, []);
 
   return (
     <header className="header-down">
@@ -28,11 +35,16 @@ const HeaderDown = () => {
 
           <nav className="header__nav">
             <div className="nav__content">
-              <p onClick={() => navigate("/catalog")}>КАТАЛОГ</p>
+              <p onClick={() => navigate("/products")}>КАТАЛОГ</p>
               <p onClick={() => navigate("/about")}>О НАС</p>
               <p onClick={() => navigate("/testimonials")}>ОТЗЫВЫ</p>
               <p onClick={() => navigate("/delivery")}>ДОСТАВКА</p>
               <p onClick={() => navigate("/contacts")}>КОНТАКТЫ</p>
+              {currentUser ? (
+                <div className="nav__products">
+                  <p onClick={() => navigate("/add")}>ДОБАВИТЬ ПРОДУКТ</p>
+                </div>
+              ) : null}
             </div>
           </nav>
           <div className="header__ftrs">

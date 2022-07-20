@@ -12,8 +12,7 @@ import Loader from "../Loader/Loader";
 
 const Header = () => {
   const navigate = useNavigate();
-  const { currentUser, checkAuth, loading, handleLogout } =
-    useContext(authContext);
+  const { currentUser, checkAuth, loading } = useContext(authContext);
   useEffect(() => {
     if (localStorage.getItem("tokens")) {
       checkAuth();
@@ -45,14 +44,14 @@ const Header = () => {
           </div>
           <nav className="header__nav">
             <div className="nav__content">
-              <p onClick={() => navigate("/catalog")}>КАТАЛОГ</p>
+              <p onClick={() => navigate("/products")}>КАТАЛОГ</p>
+
               <p onClick={() => navigate("/about")}>О НАС</p>
               <p onClick={() => navigate("/testimonials")}>ОТЗЫВЫ</p>
               <p onClick={() => navigate("/delivery")}>ДОСТАВКА</p>
               <p onClick={() => navigate("/contacts")}>КОНТАКТЫ</p>
               {currentUser ? (
                 <div className="nav__products">
-                  <p onClick={() => navigate("/products")}>КАТАЛОГ</p>
                   <p onClick={() => navigate("/add")}>ДОБАВИТЬ ПРОДУКТ</p>
                 </div>
               ) : null}

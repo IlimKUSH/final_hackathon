@@ -4,7 +4,6 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import About from "./components/About/About";
 import AddProduct from "./components/AddProduct/AddProduct";
 import Cart from "./components/Cart/Cart";
-import Catalog from "./components/Catalog/Catalog";
 import Contacts from "./components/Contacts/Contacts";
 import Delivery from "./components/Delivery/Delivery";
 import Details from "./components/Details/Details";
@@ -38,8 +37,6 @@ const Routing = () => {
       <Route path="/favorites" element={<Favorites />} />
 
       <Route path="/PaymentSucces" element={<PaymentSucces />} />
-
-      <Route path="/catalog" element={<Catalog />} />
 
       <Route path="/cart" element={<Cart />} />
 

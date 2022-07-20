@@ -1,4 +1,4 @@
-import { Box, Container, Pagination } from "@mui/material";
+import { Pagination } from "@mui/material";
 import React, { useContext, useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { productsContext } from "../../contexts/productsContext";
@@ -32,7 +32,7 @@ const ProductsList = () => {
       <div style={{ display: "flex", justifyContent: "center" }}>
         <Pagination
           page={currentPage}
-          count={5}
+          count={pages}
           onChange={(e, page) => setCurrentPage(page)}
           variant={"outlined"}
           color="primary"

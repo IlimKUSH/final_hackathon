@@ -80,13 +80,13 @@ form {
 label {
   cursor: default;
 }
-input[type="text"] {
+input {
   border: 1px solid #dddddd;
   color: #666666;
   font-size: 16px;
   padding: 0 15px;
 }
-input[type="text"] {
+input {
   outline: none;
   /* border: none; */
   padding: 0;
@@ -120,7 +120,7 @@ textarea {
   color: #ea8305;
   margin-bottom: 3px;
 }
-input[type="text"].revform-input {
+input.revform-input {
   width: 100%;
   height: 57px;
   box-shadow: rgb(255 255 255 / 24%) 0px 4px 15px 1px;

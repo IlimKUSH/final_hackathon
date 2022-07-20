@@ -6,6 +6,7 @@ export const productsContext = React.createContext();
 const INIT_STATE = {
   products: [],
   pages: 0,
+  values: 0,
   categories: [],
   oneProduct: null,
   favorites: [],
@@ -60,6 +61,26 @@ const ProductsContextProvider = ({ children }) => {
     }
   }
 
+  async function getRating() {
+    try {
+      const tokens = JSON.parse(localStorage.getItem("tokens"));
+      //config
+      const Authorization = `Bearer ${tokens.access}`;
+      const config = {
+        headers: {
+          Authorization,
+        },
+      };
+      const res = await axios.post(`${API}/rating/`, config);
+      console.log(res);
+      dispatch({
+        type: "GET_RATING",
+        payload: res.data.results,
+      });
+    } catch (err) {
+      console.log(err);
+    }
+  }
   async function getCategories() {
     try {
       const tokens = JSON.parse(localStorage.getItem("tokens"));
@@ -159,6 +180,7 @@ const ProductsContextProvider = ({ children }) => {
     <productsContext.Provider
       value={{
         products: state.products,
+        values: state.values,
         pages: state.pages,
         categories: state.categories,
         oneProduct: state.oneProduct,
@@ -170,6 +192,7 @@ const ProductsContextProvider = ({ children }) => {
         deleteProduct,
         getOneProduct,
         updateProduct,
+        getRating,
       }}>
       {children}
     </productsContext.Provider>
