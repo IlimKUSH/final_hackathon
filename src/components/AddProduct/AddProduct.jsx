@@ -58,7 +58,7 @@ const AddProduct = () => {
           value={price}
           onChange={e => setPrice(e.target.value)}
         />
-        <select value={category} onChange={e => setCategory(e.target.value)}>
+        <select onChange={e => setCategory(e.target.value)}>
           {categories.map(item => (
             <option>{item.name}</option>
           ))}
