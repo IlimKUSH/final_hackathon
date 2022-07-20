@@ -21,15 +21,22 @@ const ProductsList = () => {
     });
   }, [currentPage]);
   console.log(products);
+
   return (
     <div className="container">
       <HeaderDown />
-      <div>
+      <div style={{ display: "flex", flexWrap: "wrap" }}>
         {products.map(item => (
           <ProductsCard key={item.id} item={item} />
         ))}
       </div>
-      <div style={{ display: "flex", justifyContent: "center" }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          textAlign: "center",
+        }}>
+        <p>Первая</p>
         <Pagination
           page={currentPage}
           count={pages}
@@ -37,6 +44,7 @@ const ProductsList = () => {
           variant={"outlined"}
           color="primary"
         />
+        <p>последняя</p>
       </div>
     </div>
   );
