@@ -1,0 +1,14 @@
+.products__content {
+  margin-top: 32px;
+  width: 220px;
+  background: #3b3a40;
+  border-radius: 0px 30px 0px 0px;
+}
+.products_img {
+  width: 220px;
+  height: 284.71px;
+  border-radius: 0px 0px 67px 0px;
+}
+.products_item {
+  display: flex;
+}

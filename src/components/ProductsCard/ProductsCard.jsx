@@ -10,6 +10,7 @@ export default function ProductCard({ item }) {
   const { deleteProduct, getRating } = React.useContext(productsContext);
   const [value, setValue] = React.useState("");
 
+
   const { addToCart, checkProductInCart } = React.useContext(cartContext);
   const navigate = useNavigate();
   const [productState, setProductState] = React.useState(
@@ -18,6 +19,7 @@ export default function ProductCard({ item }) {
   // console.log(item);
 
   return (
+
     <div className="products">
       <div className="container">
         <div className="products__content">
@@ -45,6 +47,7 @@ export default function ProductCard({ item }) {
               setValue(newValue);
             }}
           />
+
         </div>
       </div>
     </div>
