@@ -83,6 +83,7 @@ export default class PaymentForm extends React.Component {
                   <textarea
                     className="text"
                     style={{
+                      color: "white",
                       width: "100%",
                       maxWidth: "461px",
                       height: "142px",

@@ -28,7 +28,9 @@ const Favorites = () => {
   // console.log(favorites, favoritesPages);
   return (
     <div className="container">
-      <HeaderDown />
+
+      <HeaderDown />;
+
       <div
         display={"flex"}
         flexWrap={"wrap"}
@@ -38,7 +40,6 @@ const Favorites = () => {
           <FavoritesCard key={item.id} item={item} />
         ))}
       </div>
-      <div display={"flex"} justifyContent={"center"}></div>
       <div display={"flex"} justifyContent={"center"}>
         <Pagination
           page={currentPage}
@@ -47,6 +48,8 @@ const Favorites = () => {
           variant={"outlined"}
           color="primary"
         />
+     
+      
       </div>
     </div>
   );

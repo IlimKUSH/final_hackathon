@@ -19,12 +19,13 @@
   align-items: center;
   display: flex;
   border: solid 2 px, white;
-  margin: 5px;
+  margin: 30px;
   box-shadow: 0px 4px 15px 1px rgba(255, 255, 255, 0.24);
   border-radius: 15px;
   padding: 30px;
 }
 .cart_img {
+  object-fit: cover;
   width: 182px;
   height: 247px;
 }
@@ -33,6 +34,19 @@
   border-radius: 15px;
   padding: 10px;
 }
+
+.cart_btn {
+  height: 69px;
+  width: 300px;
+  background: #ea8305;
+  border: 2px solid rgba(255, 255, 255, 0.13);
+  box-sizing: border-box;
+  border-radius: 5px;
+  color: white;
+  margin-top: 6px;
+  font-size: 24px;
+}
+
 .cartpage {
   display: flex;
   flex-wrap: wrap;
