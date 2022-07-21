@@ -211,3 +211,24 @@ a {
     flex-wrap: wrap;
   }
 }
+@media all and (max-width: 950px) {
+  .cart {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .product_in_cart {
+    width: 300px;
+    height: 300px;
+  }
+
+  .buy_in_cart {
+    margin-top: 600px;
+  }
+  .card_in_cart {
+    flex-wrap: wrap;
+  }
+}
