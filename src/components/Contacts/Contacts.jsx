@@ -41,7 +41,7 @@ const Contacts = () => {
                 fill="#414141"
               />
             </svg>
-            <p>Contacts</p>
+            <p>Контакты</p>
           </div>
           <h2 className="h2-line show-575">Контакты</h2>
           <div className="contain-979">
@@ -145,7 +145,7 @@ const Contacts = () => {
                         rel="nofollow"
                         target="_blank"
                         className="hcontacts-item-link">
-                        https://vk.com/guitar_lavka
+                        {/* https://vk.com/guitar_lavka */}
                       </a>
                     </div>
                   </div>
@@ -160,7 +160,7 @@ const Contacts = () => {
                         rel="nofollow"
                         target="_blank"
                         className="hcontacts-item-link">
-                        https://www.youtube.com/channel/UCOtmHwYhxhqGokpQEbLE3RA
+                        {/* https://www.youtube.com/channel/UCOtmHwYhxhqGokpQEbLE3RA */}
                       </a>
                     </div>
                   </div>
