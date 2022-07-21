@@ -22,7 +22,6 @@ export default class PaymentForm extends React.Component {
 
   handleInputChange = e => {
     const { name, value } = e.target;
-
     this.setState({ [name]: value });
   };
 
@@ -31,7 +30,7 @@ export default class PaymentForm extends React.Component {
       <div>
         <HeaderDown />
         <div className="contained">
-          <div style={{ display: "flex" }}>
+          <div className="form" style={{ display: "flex" }}>
             <Link to={"/"}>
               <p className="bread">Главная</p>
             </Link>
@@ -39,7 +38,12 @@ export default class PaymentForm extends React.Component {
             <p>Оформление заказа</p>
           </div>
 
-          <div style={{ display: "flex", justifyContent: "space-between" }}>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              flexWrap: "wrap",
+            }}>
             <div className="main">
               <h1
                 style={{

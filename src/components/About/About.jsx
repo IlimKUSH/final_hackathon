@@ -1,25 +1,16 @@
 import React from "react";
 import HeaderDown from "../Header/HeaderDown";
 import "./about.css";
-import { Swiper, SwiperSlide } from "swiper/react";
 
 //! IMAGES
 import Anon from "../../images/Anon.png";
-import Gitar from "../../images/gitar.png";
 import Vk from "../../images/vkontakte.svg";
 import YouTube from "../../images/youtub.svg";
-import ShopIn from "../../images/shop-in.png";
-import ShopOut from "../../images/shop-out.png";
-import ShopLeft from "../../images/shop-left.png";
 
 import { A11y, Navigation, Pagination } from "swiper";
 import { Container } from "@mui/system";
 import { useNavigate } from "react-router-dom";
 //! IMAGES
-
-// import { Swiper, SwiperSlide } from "swiper/react";
-// import { A11y, Navigation, Pagination, Scrollbar } from "swiper";
-
 const About = () => {
   const navigate = useNavigate();
   return (
@@ -52,8 +43,6 @@ const About = () => {
           <div className="we-w">
             <div className="we-it-w">
               <div className="we-it">
-                {/* <a href="#" className="we-it"> */}
-
                 <div className="we-img-w">
                   <img
                     src={Anon}
@@ -81,7 +70,6 @@ const About = () => {
                 </div>
                 <div className="we-txt">Максат</div>
               </div>
-
               <a href="#" className="we-it">
                 <div className="we-img-w">
                   <img
@@ -108,7 +96,6 @@ const About = () => {
                 </div>
                 <div className="we-txt">Алихан</div>
               </a>
-
               <a href="#" className="we-it">
                 <div className="we-img-w">
                   <img
@@ -262,8 +249,6 @@ const About = () => {
             </div>
           </div>
         </div>
-        //!
-        {/* <div>karta</div> */}
         <div className="where">
           <div className="contain">
             <div className="where-w">

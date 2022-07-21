@@ -166,3 +166,25 @@ h3 {
   font-size: 13px;
   color: rgba(255, 255, 255, 0.6);
 }
+
+@media all and (max-width: 630px) {
+  .main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .header-down__content {
+    display: flex;
+    justify-content: center;
+  }
+  .form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
