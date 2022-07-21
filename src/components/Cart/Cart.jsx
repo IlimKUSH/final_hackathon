@@ -10,7 +10,9 @@ import RemoveIcon from "@mui/icons-material/Remove";
 import AddIcon from "@mui/icons-material/Add";
 import DeleteIcon from "@mui/icons-material/Delete";
 import InfoIcon from "@mui/icons-material/Info";
+
 import HeaderDown from "../Header/HeaderDown";
+
 
 export default function Cart({ item }) {
   const navigate = useNavigate();

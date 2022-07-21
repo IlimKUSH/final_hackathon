@@ -10,6 +10,8 @@ const INIT_STATE = {
   oneProduct: null,
   favorites: [],
   favoritesPages: 0,
+  price_to: 100000,
+  price_from: 0,
 };
 function reducer(state = INIT_STATE, action) {
   switch (action.type) {
@@ -71,7 +73,7 @@ const ProductsContextProvider = ({ children }) => {
         },
       };
       const res = await axios.post(`${API}/rating/`, config);
-      console.log(res);
+      // console.log(res);
       dispatch({
         type: "GET_RATING",
         payload: res.data.results,
@@ -91,7 +93,7 @@ const ProductsContextProvider = ({ children }) => {
         },
       };
       const res = await axios(`${API}/category/`, config);
-      console.log(res);
+      // console.log(res);
       dispatch({
         type: "GET_CATEGORIES",
         payload: res.data.results,
@@ -111,7 +113,7 @@ const ProductsContextProvider = ({ children }) => {
         },
       };
       const res = await axios.post(`${API}/products/`, newProduct, config);
-      console.log(res);
+      // console.log(res);
       navigate("/products");
       getProducts();
     } catch (err) {
@@ -186,7 +188,7 @@ const ProductsContextProvider = ({ children }) => {
         },
       };
       const res = await axios(`${API}/products/${id}/like/`, config);
-      console.log(res);
+      // console.log(res);
       getProducts();
     } catch (err) {
       console.log(err);
@@ -203,7 +205,7 @@ const ProductsContextProvider = ({ children }) => {
         },
       };
       const res = await axios(`${API}/products/${id}/favorite/`, config);
-      console.log(res);
+      // console.log(res);
       getFavorites();
       getProducts();
     } catch (err) {
@@ -224,7 +226,7 @@ const ProductsContextProvider = ({ children }) => {
         `${API}/favorite/${window.location.search}`,
         config
       );
-      console.log(res);
+      // console.log(res);
       dispatch({
         type: "GET_FAVORITES",
         payload: res.data,
@@ -244,7 +246,7 @@ const ProductsContextProvider = ({ children }) => {
         },
       };
       const res = await axios.post(`${API}/comment/`, comment, config);
-      console.log(res);
+      // console.log(res);
       getOneProduct(productId);
     } catch (err) {
       console.log(err);
@@ -275,6 +277,8 @@ const ProductsContextProvider = ({ children }) => {
         oneProduct: state.oneProduct,
         favorites: state.favorites,
         favoritesPages: state.favoritesPages,
+        price_to: state.price_to,
+        price_from: state.price_from,
         getProducts,
         getCategories,
         createProduct,
