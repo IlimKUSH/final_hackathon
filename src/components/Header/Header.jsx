@@ -9,10 +9,12 @@ import Swiper from "../Swiper/Swiper";
 import { useNavigate } from "react-router-dom";
 import { authContext } from "../../contexts/authContext";
 import Loader from "../Loader/Loader";
+import { Badge, IconButton } from "@mui/material";
+import { AddShoppingCart } from "@mui/icons-material";
 
 const Header = () => {
   const navigate = useNavigate();
-  const { currentUser, checkAuth, loading } = useContext(authContext);
+  const { currentUser, checkAuth, loading, count } = useContext(authContext);
   useEffect(() => {
     if (localStorage.getItem("tokens")) {
       checkAuth();
@@ -39,6 +41,7 @@ const Header = () => {
                 src={Fav}
                 alt="favorites"
               />
+              <Badge badgeContent={count}></Badge>
               <img onClick={() => navigate("/cart")} src={Cart} alt="cart" />
             </div>
           </div>

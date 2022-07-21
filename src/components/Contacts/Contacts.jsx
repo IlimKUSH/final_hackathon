@@ -145,7 +145,7 @@ const Contacts = () => {
                         rel="nofollow"
                         target="_blank"
                         className="hcontacts-item-link">
-                        https://vk.com/guitar_lavka
+                        {/* https://vk.com/guitar_lavka */}
                       </a>
                     </div>
                   </div>
@@ -160,7 +160,7 @@ const Contacts = () => {
                         rel="nofollow"
                         target="_blank"
                         className="hcontacts-item-link">
-                        https://www.youtube.com/channel/UCOtmHwYhxhqGokpQEbLE3RA
+                        {/* https://www.youtube.com/channel/UCOtmHwYhxhqGokpQEbLE3RA */}
                       </a>
                     </div>
                   </div>
