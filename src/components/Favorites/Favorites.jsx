@@ -1,15 +1,27 @@
-import React, { useContext, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import { favContext } from "../../contexts/favContext";
-import "./Favorites.css";
+import React, { useContext, useEffect, useState } from "react";
+import { useSearchParams } from "react-router-dom";
+import { productsContext } from "../../contexts/productsContext";
+import FavoritesCard from "../FavoritesCard/FavoritesCard";
+import HeaderDown from "../Header/HeaderDown";
 
-const Cart = ({ item }) => {
-  const navigate = useNavigate();
-
-  const { getFav, fav, deleteFromFav } = useContext(favContext);
-
+const Favorites = () => {
+  const { getFavorites, favoritesPages, favorites } =
+    useContext(productsContext);
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [currentPage, setCurrentPage] = useState(1);
   useEffect(() => {
-    getFav();
+    getFavorites();
+  }, []);
+  useEffect(() => {
+    getFavorites();
+  }, [searchParams]);
+  useEffect(() => {
+    setSearchParams({
+      page: currentPage,
+    });
+  }, []);
+  useEffect(() => {
+    getFavorites();
   }, []);
   return fav ? (
     <div>
@@ -126,9 +138,7 @@ const Cart = ({ item }) => {
         </div>
       </div>
     </div>
-  ) : (
-    <h1>Loading...</h1>
   );
 };
 
-export default Cart;
+export default Favorites;

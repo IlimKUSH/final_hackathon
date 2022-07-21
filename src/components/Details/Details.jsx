@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { productsContext } from "../../contexts/productsContext";
+import Comments from "../Comments/Comments";
 import Loader from "../Loader/Loader";
 
 const Details = () => {
@@ -39,6 +40,7 @@ const Details = () => {
         <h5>Price: {oneProduct.price}</h5>
         <h5>Category: {oneProduct.category}</h5>
         <img width={300} src={oneProduct.image} alt="product" />
+        <Comments comments={oneProduct.comments} />
       </div>
     </div>
   );

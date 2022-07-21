@@ -7,6 +7,7 @@
 .products_img {
   width: 220px;
   height: 284.71px;
+  object-fit: contain;
   border-radius: 0px 0px 67px 0px;
 }
 .products_item {

@@ -36,7 +36,6 @@ const ProductsList = () => {
           justifyContent: "center",
           textAlign: "center",
         }}>
-        <p>Первая</p>
         <Pagination
           page={currentPage}
           count={pages}
@@ -44,7 +43,6 @@ const ProductsList = () => {
           variant={"outlined"}
           color="primary"
         />
-        <p>последняя</p>
       </div>
     </div>
   );

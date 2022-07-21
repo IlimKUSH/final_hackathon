@@ -29,10 +29,10 @@ const Header = () => {
       <div className="container">
         <div className="header__content">
           <div className="header__mid">
-            <div className="header__search">
+            {/* <div className="header__search">
               <img src={Search} alt="search" />
               <input placeholder="Поиск" type="text" />
-            </div>
+            </div> */}
 
             <img src={Logo} alt="logo" />
             <div className="header__ftrs">
@@ -48,7 +48,7 @@ const Header = () => {
           <nav className="header__nav">
             <div className="nav__content">
               <p onClick={() => navigate("/products")}>КАТАЛОГ</p>
-
+              <p onClick={() => navigate("/favorites")}>Favorites</p>
               <p onClick={() => navigate("/about")}>О НАС</p>
               <p onClick={() => navigate("/testimonials")}>ОТЗЫВЫ</p>
               <p onClick={() => navigate("/delivery")}>ДОСТАВКА</p>

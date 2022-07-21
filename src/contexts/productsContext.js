@@ -6,7 +6,6 @@ export const productsContext = React.createContext();
 const INIT_STATE = {
   products: [],
   pages: 0,
-  values: 0,
   categories: [],
   oneProduct: null,
   favorites: [],
@@ -176,11 +175,101 @@ const ProductsContextProvider = ({ children }) => {
       console.log(err);
     }
   }
+  async function getLike(id) {
+    try {
+      const tokens = JSON.parse(localStorage.getItem("tokens"));
+      //config
+      const Authorization = `Bearer ${tokens.access}`;
+      const config = {
+        headers: {
+          Authorization,
+        },
+      };
+      const res = await axios(`${API}/products/${id}/like/`, config);
+      console.log(res);
+      getProducts();
+    } catch (err) {
+      console.log(err);
+    }
+  }
+  async function getFavorite(id) {
+    try {
+      const tokens = JSON.parse(localStorage.getItem("tokens"));
+      //config
+      const Authorization = `Bearer ${tokens.access}`;
+      const config = {
+        headers: {
+          Authorization,
+        },
+      };
+      const res = await axios(`${API}/products/${id}/favorite/`, config);
+      console.log(res);
+      getFavorites();
+      getProducts();
+    } catch (err) {
+      console.log(err);
+    }
+  }
+  async function getFavorites(id) {
+    try {
+      const tokens = JSON.parse(localStorage.getItem("tokens"));
+      //config
+      const Authorization = `Bearer ${tokens.access}`;
+      const config = {
+        headers: {
+          Authorization,
+        },
+      };
+      const res = await axios(
+        `${API}/favorite/${window.location.search}`,
+        config
+      );
+      console.log(res);
+      dispatch({
+        type: "GET_FAVORITES",
+        payload: res.data,
+      });
+    } catch (err) {
+      console.log(err);
+    }
+  }
+  async function createComment(comment, productId) {
+    try {
+      const tokens = JSON.parse(localStorage.getItem("tokens"));
+      //config
+      const Authorization = `Bearer ${tokens.access}`;
+      const config = {
+        headers: {
+          Authorization,
+        },
+      };
+      const res = await axios.post(`${API}/comment/`, comment, config);
+      console.log(res);
+      getOneProduct(productId);
+    } catch (err) {
+      console.log(err);
+    }
+  }
+  async function deleteComment(commentId, productId) {
+    try {
+      const tokens = JSON.parse(localStorage.getItem("tokens"));
+      //config
+      const Authorization = `Bearer ${tokens.access}`;
+      const config = {
+        headers: {
+          Authorization,
+        },
+      };
+      await axios.delete(`${API}/comment/${commentId}/`, config);
+      getOneProduct(productId);
+    } catch (err) {
+      console.log(err);
+    }
+  }
   return (
     <productsContext.Provider
       value={{
         products: state.products,
-        values: state.values,
         pages: state.pages,
         categories: state.categories,
         oneProduct: state.oneProduct,
@@ -192,6 +281,11 @@ const ProductsContextProvider = ({ children }) => {
         deleteProduct,
         getOneProduct,
         updateProduct,
+        getLike,
+        getFavorite,
+        getFavorites,
+        createComment,
+        deleteComment,
         getRating,
       }}>
       {children}
