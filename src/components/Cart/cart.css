@@ -32,7 +32,7 @@
   box-shadow: 0px 4px 15px 1px rgba(255, 255, 255, 0.24);
   border-radius: 15px;
   padding: 10px;
-=======
+}
 .cartpage {
   display: flex;
   flex-wrap: wrap;
@@ -196,5 +196,4 @@ a {
     display: flex;
     flex-wrap: wrap;
   }
-
 }

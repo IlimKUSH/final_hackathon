@@ -32,6 +32,32 @@ h6 {
 .path > svg {
   margin: 0 5px;
 }
+.search > input {
+  border: 0;
+  background-color: inherit !important;
+  border: none !important;
+  font-size: 14px !important;
+  line-height: 14px !important;
+  color: #ffffff !important;
+  margin-left: 10px !important;
+}
+.search__parent {
+  display: flex;
+}
+.search {
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ffffff;
+  padding: 5px;
+}
+.search > img {
+  margin: 0 10px;
+}
+
+.css-53tbrc-MuiSlider-root {
+  color: #ea8305 !important;
+}
 
 @media all and (max-width: 865px) {
   .header__nav {
