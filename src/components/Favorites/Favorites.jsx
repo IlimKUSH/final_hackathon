@@ -3,6 +3,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { productsContext } from "../../contexts/productsContext";
 import FavoritesCard from "../FavoritesCard/FavoritesCard";
+import HeaderDown from "../Header/HeaderDown";
 
 const Favorites = () => {
   const { getFavorites, favoritesPages, favorites } =
@@ -27,6 +28,7 @@ const Favorites = () => {
   console.log(favorites, favoritesPages);
   return (
     <div className="container">
+      <HeaderDown />;
       <div
         display={"flex"}
         flexWrap={"wrap"}
@@ -36,10 +38,8 @@ const Favorites = () => {
           <FavoritesCard key={item.id} item={item} />
         ))}
       </div>
+      <div display={"flex"} justifyContent={"center"}></div>
       <div display={"flex"} justifyContent={"center"}>
-      </Box>
-      <Box display={"flex"} justifyContent={"center"}>
-
         <Pagination
           page={currentPage}
           onChange={(e, page) => setCurrentPage(page)}
@@ -47,10 +47,7 @@ const Favorites = () => {
           variant={"outlined"}
           color="primary"
         />
-
       </div>
-    </div>
-      </Box>
     </div>
   );
 };

@@ -48,7 +48,7 @@ const Header = () => {
           <nav className="header__nav">
             <div className="nav__content">
               <p onClick={() => navigate("/products")}>КАТАЛОГ</p>
-              <p onClick={() => navigate("/favorites")}>Favorites</p>
+
               <p onClick={() => navigate("/about")}>О НАС</p>
               <p onClick={() => navigate("/testimonials")}>ОТЗЫВЫ</p>
               <p onClick={() => navigate("/delivery")}>ДОСТАВКА</p>
