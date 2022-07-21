@@ -52,13 +52,13 @@ const AddProduct = () => {
           value={name}
           onChange={e => setName(e.target.value)}
         />
-        <TextField
+        <input
           placeholder="description"
           type="outlined"
           value={description}
           onChange={e => setDescription(e.target.value)}
         />
-        <TextField
+        <input
           placeholder="price"
           type="number"
           value={price}

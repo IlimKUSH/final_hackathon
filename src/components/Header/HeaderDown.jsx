@@ -37,7 +37,7 @@ const HeaderDown = () => {
             src={Logo}
             alt="logo"
           />
-          <div className="header__search">
+          {/* <div className="header__search">
             <img src={Search} alt="search" />
             <input
               value={search}
@@ -45,7 +45,7 @@ const HeaderDown = () => {
               placeholder="Поиск"
               type="text"
             />
-          </div>
+          </div> */}
 
           <nav className="header__nav">
             <div className="nav__content">
@@ -54,7 +54,7 @@ const HeaderDown = () => {
               <p onClick={() => navigate("/testimonials")}>ОТЗЫВЫ</p>
               <p onClick={() => navigate("/delivery")}>ДОСТАВКА</p>
               <p onClick={() => navigate("/contacts")}>КОНТАКТЫ</p>
-              <p onClick={() => navigate("/favorites")}>Favorites</p>
+
               {currentUser ? (
                 <div className="nav__products">
                   <p onClick={() => navigate("/add")}>ДОБАВИТЬ ПРОДУКТ</p>
