@@ -1,15 +1,26 @@
+
 import * as React from "react";
 
 import { IconButton } from "@mui/material";
+// import * as React from "react";
+// import Table from "@mui/material/Table";
+// import TableBody from "@mui/material/TableBody";
+// import TableCell from "@mui/material/TableCell";
+// import TableContainer from "@mui/material/TableContainer";
+// import TableHead from "@mui/material/TableHead";
+// import TableRow from "@mui/material/TableRow";
+// import Paper from "@mui/material/Paper";
+// import { Box, Container, IconButton, Typography } from "@mui/material";
 
-import Loader from "../Loader/Loader";
-import { Link, useNavigate } from "react-router-dom";
-import { cartContext } from "../../contexts/cartContext";
-import "./cart.css";
-import RemoveIcon from "@mui/icons-material/Remove";
-import AddIcon from "@mui/icons-material/Add";
-import DeleteIcon from "@mui/icons-material/Delete";
-import InfoIcon from "@mui/icons-material/Info";
+// import Loader from "../Loader/Loader";
+// import { Link, useNavigate } from "react-router-dom";
+// import { cartContext } from "../../contexts/cartContext";
+// import "./cart.css";
+// import RemoveIcon from "@mui/icons-material/Remove";
+// import AddIcon from "@mui/icons-material/Add";
+// import DeleteIcon from "@mui/icons-material/Delete";
+// import InfoIcon from "@mui/icons-material/Info";
+
 
 export default function Cart({ item }) {
   const navigate = useNavigate();
@@ -110,3 +121,4 @@ export default function Cart({ item }) {
     <Loader />
   );
 }
+

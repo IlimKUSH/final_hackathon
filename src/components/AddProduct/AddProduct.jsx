@@ -1,5 +1,15 @@
 import { PhotoCamera } from "@mui/icons-material";
-import { IconButton, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  FormControl,
+  IconButton,
+  InputLabel,
+  MenuItem,
+  Select,
+  TextField,
+  Typography,
+} from "@mui/material";
 import React, { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { productsContext } from "../../contexts/productsContext";
@@ -38,13 +48,13 @@ const AddProduct = () => {
         <h6>Добавить продукт</h6>
         <input
           placeholder="name"
-          type="text"
+          type="outlined"
           value={name}
           onChange={e => setName(e.target.value)}
         />
         <input
           placeholder="description"
-          type="text"
+          type="outlined"
           value={description}
           onChange={e => setDescription(e.target.value)}
         />
@@ -59,6 +69,7 @@ const AddProduct = () => {
             <option>{item.name}</option>
           ))}
         </select>
+
         <IconButton
           color="primary"
           aria-label="upload picture"

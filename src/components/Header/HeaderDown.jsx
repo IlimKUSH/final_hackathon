@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 import "./header.css";
 
@@ -6,10 +6,19 @@ import Logo from "../../images/logo.png";
 import Search from "../../images/search.svg";
 import Cart from "../../images/cart.svg";
 import Fav from "../../images/fav.svg";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { authContext } from "../../contexts/authContext";
 
 const HeaderDown = () => {
+  const [searchParam, setSearchParam] = useSearchParams();
+  const [search, setSearch] = useState(
+    searchParam.get("q") ? searchParam.get("q") : ""
+  );
+  useEffect(() => {
+    setSearchParam({
+      q: search,
+    });
+  }, [search]);
   const navigate = useNavigate();
   const { currentUser, checkAuth } = useContext(authContext);
   useEffect(() => {
@@ -28,10 +37,15 @@ const HeaderDown = () => {
             src={Logo}
             alt="logo"
           />
-          <div className="header__search">
+          {/* <div className="header__search">
             <img src={Search} alt="search" />
-            <input placeholder="Поиск" type="text" />
-          </div>
+            <input
+              value={search}
+              onChange={e => setSearch(e.target.value)}
+              placeholder="Поиск"
+              type="text"
+            />
+          </div> */}
 
           <nav className="header__nav">
             <div className="nav__content">
@@ -40,6 +54,7 @@ const HeaderDown = () => {
               <p onClick={() => navigate("/testimonials")}>ОТЗЫВЫ</p>
               <p onClick={() => navigate("/delivery")}>ДОСТАВКА</p>
               <p onClick={() => navigate("/contacts")}>КОНТАКТЫ</p>
+
               {currentUser ? (
                 <div className="nav__products">
                   <p onClick={() => navigate("/add")}>ДОБАВИТЬ ПРОДУКТ</p>

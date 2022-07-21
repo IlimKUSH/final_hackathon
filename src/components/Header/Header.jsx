@@ -9,10 +9,12 @@ import Swiper from "../Swiper/Swiper";
 import { useNavigate } from "react-router-dom";
 import { authContext } from "../../contexts/authContext";
 import Loader from "../Loader/Loader";
+import { Badge, IconButton } from "@mui/material";
+import { AddShoppingCart } from "@mui/icons-material";
 
 const Header = () => {
   const navigate = useNavigate();
-  const { currentUser, checkAuth, loading } = useContext(authContext);
+  const { currentUser, checkAuth, loading, count } = useContext(authContext);
   useEffect(() => {
     if (localStorage.getItem("tokens")) {
       checkAuth();
@@ -27,10 +29,10 @@ const Header = () => {
       <div className="container">
         <div className="header__content">
           <div className="header__mid">
-            <div className="header__search">
+            {/* <div className="header__search">
               <img src={Search} alt="search" />
               <input placeholder="Поиск" type="text" />
-            </div>
+            </div> */}
 
             <img src={Logo} alt="logo" />
             <div className="header__ftrs">
@@ -39,13 +41,14 @@ const Header = () => {
                 src={Fav}
                 alt="favorites"
               />
+              <Badge badgeContent={count}></Badge>
               <img onClick={() => navigate("/cart")} src={Cart} alt="cart" />
             </div>
           </div>
           <nav className="header__nav">
             <div className="nav__content">
               <p onClick={() => navigate("/products")}>КАТАЛОГ</p>
-
+              <p onClick={() => navigate("/favorites")}>Favorites</p>
               <p onClick={() => navigate("/about")}>О НАС</p>
               <p onClick={() => navigate("/testimonials")}>ОТЗЫВЫ</p>
               <p onClick={() => navigate("/delivery")}>ДОСТАВКА</p>

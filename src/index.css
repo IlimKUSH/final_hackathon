@@ -25,6 +25,13 @@ h6 {
   line-height: 28px;
   color: #ffffff;
 }
+.path {
+  display: flex;
+  align-items: center;
+}
+.path > svg {
+  margin: 0 5px;
+}
 
 @media all and (max-width: 865px) {
   .header__nav {
