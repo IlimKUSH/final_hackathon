@@ -41,7 +41,7 @@ const Contacts = () => {
                 fill="#414141"
               />
             </svg>
-            <p>Contacts</p>
+            <p>Контакты</p>
           </div>
           <h2 className="h2-line show-575">Контакты</h2>
           <div className="contain-979">

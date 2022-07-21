@@ -29,7 +29,7 @@ const Cart = ({ item }) => {
               fill="#414141"
             />
           </svg>
-          <p>Favorites</p>
+          <p>Избранные</p>
         </div>
         <div className="cart">
           <h2>Избранное</h2>

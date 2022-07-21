@@ -29,6 +29,7 @@ const Main = () => {
   return (
     <div>
       <Header />
+
       <main className="hero">
         <div className="container">
           <div className="hero__cards">
@@ -71,6 +72,264 @@ const Main = () => {
               modules={[Navigation, Pagination, A11y]}
               spaceBetween={50}
               slidesPerView={4}
+              pagination={{ clickable: true }}
+              navigation>
+              <SwiperSlide>
+                <div className="famous__card">
+                  <img src={UkuleleFamous} alt="ukulele" />
+                  <div className="famous__card-info">
+                    <p>Укулеле</p>
+                    <h5>Enya EUC-MAD</h5>
+                    <s>₽24 890</s>
+                    <p className="famous__card-price">₽24 890</p>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="famous__card">
+                  <img src={UkuleleFamous} alt="ukulele" />
+                  <div className="famous__card-info">
+                    <p>Укулеле</p>
+                    <h5>Enya EUC-MAD</h5>
+                    <s>₽24 890</s>
+                    <p className="famous__card-price">₽24 890</p>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="famous__card">
+                  <img src={UkuleleFamous} alt="ukulele" />
+                  <div className="famous__card-info">
+                    <p>Укулеле</p>
+                    <h5>Enya EUC-MAD</h5>
+                    <s>₽24 890</s>
+                    <p className="famous__card-price">₽24 890</p>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="famous__card">
+                  <img src={UkuleleFamous} alt="ukulele" />
+                  <div className="famous__card-info">
+                    <p>Укулеле</p>
+                    <h5>Enya EUC-MAD</h5>
+                    <s>₽24 890</s>
+                    <p className="famous__card-price">₽24 890</p>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="famous__card">
+                  <img src={UkuleleFamous} alt="ukulele" />
+                  <div className="famous__card-info">
+                    <p>Укулеле</p>
+                    <h5>Enya EUC-MAD</h5>
+                    <s>₽24 890</s>
+                    <p className="famous__card-price">₽24 890</p>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="famous__card">
+                  <img src={UkuleleFamous} alt="ukulele" />
+                  <div className="famous__card-info">
+                    <p>Укулеле</p>
+                    <h5>Enya EUC-MAD</h5>
+                    <s>₽24 890</s>
+                    <p className="famous__card-price">₽24 890</p>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="famous__card">
+                  <img src={UkuleleFamous} alt="ukulele" />
+                  <div className="famous__card-info">
+                    <p>Укулеле</p>
+                    <h5>Enya EUC-MAD</h5>
+                    <s>₽24 890</s>
+                    <p className="famous__card-price">₽24 890</p>
+                  </div>
+                </div>
+              </SwiperSlide>
+            </Swiper>
+
+            <Swiper
+              className="swiper__wrapper-3"
+              modules={[Navigation, Pagination, A11y]}
+              spaceBetween={50}
+              slidesPerView={3}
+              pagination={{ clickable: true }}
+              navigation>
+              <SwiperSlide>
+                <div className="famous__card">
+                  <img src={UkuleleFamous} alt="ukulele" />
+                  <div className="famous__card-info">
+                    <p>Укулеле</p>
+                    <h5>Enya EUC-MAD</h5>
+                    <s>₽24 890</s>
+                    <p className="famous__card-price">₽24 890</p>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="famous__card">
+                  <img src={UkuleleFamous} alt="ukulele" />
+                  <div className="famous__card-info">
+                    <p>Укулеле</p>
+                    <h5>Enya EUC-MAD</h5>
+                    <s>₽24 890</s>
+                    <p className="famous__card-price">₽24 890</p>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="famous__card">
+                  <img src={UkuleleFamous} alt="ukulele" />
+                  <div className="famous__card-info">
+                    <p>Укулеле</p>
+                    <h5>Enya EUC-MAD</h5>
+                    <s>₽24 890</s>
+                    <p className="famous__card-price">₽24 890</p>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="famous__card">
+                  <img src={UkuleleFamous} alt="ukulele" />
+                  <div className="famous__card-info">
+                    <p>Укулеле</p>
+                    <h5>Enya EUC-MAD</h5>
+                    <s>₽24 890</s>
+                    <p className="famous__card-price">₽24 890</p>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="famous__card">
+                  <img src={UkuleleFamous} alt="ukulele" />
+                  <div className="famous__card-info">
+                    <p>Укулеле</p>
+                    <h5>Enya EUC-MAD</h5>
+                    <s>₽24 890</s>
+                    <p className="famous__card-price">₽24 890</p>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="famous__card">
+                  <img src={UkuleleFamous} alt="ukulele" />
+                  <div className="famous__card-info">
+                    <p>Укулеле</p>
+                    <h5>Enya EUC-MAD</h5>
+                    <s>₽24 890</s>
+                    <p className="famous__card-price">₽24 890</p>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="famous__card">
+                  <img src={UkuleleFamous} alt="ukulele" />
+                  <div className="famous__card-info">
+                    <p>Укулеле</p>
+                    <h5>Enya EUC-MAD</h5>
+                    <s>₽24 890</s>
+                    <p className="famous__card-price">₽24 890</p>
+                  </div>
+                </div>
+              </SwiperSlide>
+            </Swiper>
+
+            <Swiper
+              className="swiper__wrapper-4"
+              modules={[Navigation, Pagination, A11y]}
+              spaceBetween={50}
+              slidesPerView={2}
+              pagination={{ clickable: true }}
+              navigation>
+              <SwiperSlide>
+                <div className="famous__card">
+                  <img src={UkuleleFamous} alt="ukulele" />
+                  <div className="famous__card-info">
+                    <p>Укулеле</p>
+                    <h5>Enya EUC-MAD</h5>
+                    <s>₽24 890</s>
+                    <p className="famous__card-price">₽24 890</p>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="famous__card">
+                  <img src={UkuleleFamous} alt="ukulele" />
+                  <div className="famous__card-info">
+                    <p>Укулеле</p>
+                    <h5>Enya EUC-MAD</h5>
+                    <s>₽24 890</s>
+                    <p className="famous__card-price">₽24 890</p>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="famous__card">
+                  <img src={UkuleleFamous} alt="ukulele" />
+                  <div className="famous__card-info">
+                    <p>Укулеле</p>
+                    <h5>Enya EUC-MAD</h5>
+                    <s>₽24 890</s>
+                    <p className="famous__card-price">₽24 890</p>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="famous__card">
+                  <img src={UkuleleFamous} alt="ukulele" />
+                  <div className="famous__card-info">
+                    <p>Укулеле</p>
+                    <h5>Enya EUC-MAD</h5>
+                    <s>₽24 890</s>
+                    <p className="famous__card-price">₽24 890</p>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="famous__card">
+                  <img src={UkuleleFamous} alt="ukulele" />
+                  <div className="famous__card-info">
+                    <p>Укулеле</p>
+                    <h5>Enya EUC-MAD</h5>
+                    <s>₽24 890</s>
+                    <p className="famous__card-price">₽24 890</p>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="famous__card">
+                  <img src={UkuleleFamous} alt="ukulele" />
+                  <div className="famous__card-info">
+                    <p>Укулеле</p>
+                    <h5>Enya EUC-MAD</h5>
+                    <s>₽24 890</s>
+                    <p className="famous__card-price">₽24 890</p>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="famous__card">
+                  <img src={UkuleleFamous} alt="ukulele" />
+                  <div className="famous__card-info">
+                    <p>Укулеле</p>
+                    <h5>Enya EUC-MAD</h5>
+                    <s>₽24 890</s>
+                    <p className="famous__card-price">₽24 890</p>
+                  </div>
+                </div>
+              </SwiperSlide>
+            </Swiper>
+
+            <Swiper
+              className="swiper__wrapper-5"
+              modules={[Navigation, Pagination, A11y]}
+              spaceBetween={50}
+              slidesPerView={1}
               pagination={{ clickable: true }}
               navigation>
               <SwiperSlide>

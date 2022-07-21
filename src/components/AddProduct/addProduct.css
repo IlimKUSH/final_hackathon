@@ -1,6 +1,63 @@
 .add {
   background-color: #cc7408;
+
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: flex-start;
+}
+.add > input {
+  border: 1px solid #dddddd;
+  color: #dddddd;
+  margin-top: 5px;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 5px;
+  background: #131218;
+  outline: none;
+  -webkit-appearance: none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.add > select {
+  border: 1px solid #dddddd;
+  color: #dddddd;
+  margin-top: 5px;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 5px;
+  background: #131218;
+  outline: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+.add > select > option {
+  border: 1px solid #dddddd;
+  color: #dddddd;
+  margin-top: 5px;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 5px;
+  background: #131218;
+  outline: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+
+.add > button {
+  background: #ea8305;
+  border: 2px solid rgba(255, 255, 255, 0.13);
+  border-radius: 5px;
+  color: #dddddd;
+  margin-top: 25px;
+  font-size: 24px;
+  padding: 6px 50px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.add > button:hover {
+  background: #fba235;
+  color: white;
 }

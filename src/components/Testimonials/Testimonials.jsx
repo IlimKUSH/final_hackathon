@@ -27,7 +27,7 @@ const Testimonials = () => {
               fill="#414141"
             />
           </svg>
-          <p>Testimonials</p>
+          <p>отзывы</p>
         </div>
 
         <p

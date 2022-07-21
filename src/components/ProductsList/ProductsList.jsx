@@ -1,4 +1,4 @@
-import { Box, Container, Pagination } from "@mui/material";
+import { Pagination } from "@mui/material";
 import React, { useContext, useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { productsContext } from "../../contexts/productsContext";
@@ -21,22 +21,30 @@ const ProductsList = () => {
     });
   }, [currentPage]);
   console.log(products);
+
   return (
     <div className="container">
       <HeaderDown />
-      <div>
+      <div style={{ display: "flex", flexWrap: "wrap" }}>
         {products.map(item => (
           <ProductsCard key={item.id} item={item} />
         ))}
       </div>
-      <div style={{ display: "flex", justifyContent: "center" }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          textAlign: "center",
+        }}>
+        <p>Первая</p>
         <Pagination
           page={currentPage}
-          count={5}
+          count={pages}
           onChange={(e, page) => setCurrentPage(page)}
           variant={"outlined"}
           color="primary"
         />
+        <p>последняя</p>
       </div>
     </div>
   );
