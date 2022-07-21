@@ -17,7 +17,6 @@ import AddIcon from "@mui/icons-material/Add";
 import DeleteIcon from "@mui/icons-material/Delete";
 import InfoIcon from "@mui/icons-material/Info";
 
-
 export default function Cart() {
   const navigate = useNavigate();
   const { getCart, cart, deleteFromCart, changeCount } =
