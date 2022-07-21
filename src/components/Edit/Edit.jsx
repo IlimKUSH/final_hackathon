@@ -2,8 +2,8 @@ import { IconButton, Typography } from "@mui/material";
 import React, { useContext, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { productsContext } from "../../contexts/productsContext";
-
 import { PhotoCamera } from "@mui/icons-material";
+import "./Edit.css";
 
 const Edit = () => {
   const { id } = useParams();
@@ -64,7 +64,7 @@ const Edit = () => {
           <p>Редактирование</p>
         </div>
         <div className="edit__content">
-          <h3>Edit product</h3>
+          <h3>Редактирование</h3>
           <input
             placeholder="name"
             type="text"
@@ -101,7 +101,9 @@ const Edit = () => {
             <PhotoCamera />
           </IconButton>
           {image ? <Typography variant="span">{image.name}</Typography> : null}
-          <button onClick={handleSave}>save</button>
+          <button onClick={handleSave} variant="">
+            Сохранить
+          </button>
         </div>
       </div>
     </div>

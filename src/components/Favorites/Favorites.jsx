@@ -37,6 +37,9 @@ const Favorites = () => {
         ))}
       </div>
       <div display={"flex"} justifyContent={"center"}>
+      </Box>
+      <Box display={"flex"} justifyContent={"center"}>
+
         <Pagination
           page={currentPage}
           onChange={(e, page) => setCurrentPage(page)}
@@ -44,7 +47,10 @@ const Favorites = () => {
           variant={"outlined"}
           color="primary"
         />
+
       </div>
+    </div>
+      </Box>
     </div>
   );
 };
