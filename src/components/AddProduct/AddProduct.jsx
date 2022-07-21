@@ -1,11 +1,13 @@
 import { PhotoCamera } from "@mui/icons-material";
 import {
+  Box,
   Button,
   FormControl,
   IconButton,
   InputLabel,
   MenuItem,
   Select,
+  TextField,
   Typography,
 } from "@mui/material";
 import React, { useContext, useEffect, useState } from "react";
@@ -40,21 +42,21 @@ const AddProduct = () => {
     <div className="container">
       <div className="add">
         <h6>Add product</h6>
-        <input
+        <TextField
           placeholder="name"
-          type="text"
+          type="outlined"
           value={name}
           onChange={e => setName(e.target.value)}
         />
-        <input
+        <TextField
           placeholder="description"
-          type="text"
+          type="outlined"
           value={description}
           onChange={e => setDescription(e.target.value)}
         />
-        <input
+        <TextField
           placeholder="price"
-          type="text"
+          type="outlined"
           value={price}
           onChange={e => setPrice(e.target.value)}
         />
@@ -63,6 +65,7 @@ const AddProduct = () => {
             <option>{item.name}</option>
           ))}
         </select>
+
         <IconButton
           color="primary"
           aria-label="upload picture"
@@ -92,7 +95,7 @@ const AddProduct = () => {
           </Select>
         </FormControl> */}
 
-        <Button onClick={handleSave} variant="contained">
+        <Button onClick={handleSave} variant="outlined">
           Save
         </Button>
       </div>
