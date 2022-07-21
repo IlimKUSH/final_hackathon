@@ -13,7 +13,6 @@ import InfoIcon from "@mui/icons-material/Info";
 
 import HeaderDown from "../Header/HeaderDown";
 
-
 export default function Cart({ item }) {
   const navigate = useNavigate();
   const { getCart, cart, deleteFromCart, changeCount } =
@@ -44,7 +43,7 @@ export default function Cart({ item }) {
 
       <div className="cart">
         <div className="product_in_cart">
-          <div>
+          <div className="product_in_cart_1">
             {cart.products.map(item => (
               <div className="card_in_cart" key={item.item.id}>
                 <div>
