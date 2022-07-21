@@ -21,10 +21,26 @@ const ProductsList = () => {
     });
   }, [currentPage]);
   console.log(products);
+  const [searchParam, setSearchParam] = useSearchParams();
+  const [search, setSearch] = useState(
+    searchParam.get("q") ? searchParam.get("q") : ""
+  );
+  useEffect(() => {
+    setSearchParam({
+      q: search,
+    });
+  }, [search]);
 
   return (
     <div className="container">
       <HeaderDown />
+      {/* <img src={Search} alt="search" /> */}
+      <input
+        value={search}
+        onChange={e => setSearch(e.target.value)}
+        placeholder="Поиск"
+        type="text"
+      />
       <div style={{ display: "flex", flexWrap: "wrap" }}>
         {products.map(item => (
           <ProductsCard key={item.id} item={item} />

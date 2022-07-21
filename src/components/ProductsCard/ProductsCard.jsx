@@ -39,15 +39,7 @@ export default function ProductCard({ item }) {
   return (
     <div className="products">
       <div className="container">
-        <div className="header__search">
-          {/* <img src={Search} alt="search" /> */}
-          <input
-            value={search}
-            onChange={e => setSearch(e.target.value)}
-            placeholder="Поиск"
-            type="text"
-          />
-        </div>
+        <div className="header__search"></div>
         <div className="products_content">
           <img className="products_img" src={item.image} alt="qweqwe" />
           <div style={{ paddingLeft: "4px" }}>

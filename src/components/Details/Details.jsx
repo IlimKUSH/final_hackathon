@@ -2,7 +2,10 @@ import React, { useContext, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { productsContext } from "../../contexts/productsContext";
 import Comments from "../Comments/Comments";
+import HeaderDown from "../Header/HeaderDown";
 import Loader from "../Loader/Loader";
+
+import "./details.css";
 
 const Details = () => {
   const { id } = useParams();
@@ -18,6 +21,7 @@ const Details = () => {
   return (
     <div>
       <div className="container">
+        <HeaderDown />
         <div className="path">
           <p onClick={() => navigate("/")}>Главная</p>
           <svg
@@ -35,12 +39,16 @@ const Details = () => {
           </svg>
           <p>Детальный просмотр</p>
         </div>
-        <h5>Name: {oneProduct.name}</h5>
-        <h5>Description: {oneProduct.description}</h5>
-        <h5>Price: {oneProduct.price}</h5>
-        <h5>Category: {oneProduct.category}</h5>
-        <img width={300} src={oneProduct.image} alt="product" />
-        <Comments comments={oneProduct.comments} />
+        <div className="details__content">
+          <div className="details">
+            <h3>Название: {oneProduct.name}</h3>
+            <h3>Описание: {oneProduct.description}</h3>
+            <h3>Цена: {oneProduct.price}</h3>
+            <h3>Категория: {oneProduct.category}</h3>
+            <img width={300} src={oneProduct.image} alt="product" />
+            <Comments comments={oneProduct.comments} />
+          </div>
+        </div>
       </div>
     </div>
   );

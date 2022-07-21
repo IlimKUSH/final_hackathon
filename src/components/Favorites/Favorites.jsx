@@ -26,8 +26,8 @@ const Favorites = () => {
   }, []);
   console.log(favorites, favoritesPages);
   return (
-    <Container>
-      <Box
+    <div className="container">
+      <div
         display={"flex"}
         flexWrap={"wrap"}
         justifyContent={"center"}
@@ -35,8 +35,11 @@ const Favorites = () => {
         {favorites.map(item => (
           <FavoritesCard key={item.id} item={item} />
         ))}
+      </div>
+      <div display={"flex"} justifyContent={"center"}>
       </Box>
       <Box display={"flex"} justifyContent={"center"}>
+
         <Pagination
           page={currentPage}
           onChange={(e, page) => setCurrentPage(page)}
@@ -44,8 +47,11 @@ const Favorites = () => {
           variant={"outlined"}
           color="primary"
         />
+
+      </div>
+    </div>
       </Box>
-    </Container>
+    </div>
   );
 };
 

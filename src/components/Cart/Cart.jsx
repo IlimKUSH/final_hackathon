@@ -26,6 +26,7 @@
 //   }, []);
 //   console.log(cart);
 //   return cart ? (
+
 //     <div>
 //       <div className="bread">
 //         <Link to={"/"}>
@@ -37,6 +38,8 @@
 //         </Link>
 //       </div>
 //       <div style={{ height: "vh" }}></div>
+
+
 //       <div>
 //         <div className="card-info">
 //           <img className="card-img" src="" alt="" />
@@ -51,6 +54,89 @@
 //         </div>
 //       </div>
 
+//       <Container>
+//         <TableContainer component={Paper}>
+//           <Table sx={{ minWidth: 650 }} aria-label="simple table">
+//             <TableHead>
+
+//       <TableContainer component={Paper}>
+//         <Table sx={{ minWidth: 650 }} aria-label="simple table">
+//           <TableHead>
+//             <TableRow
+//               style={{
+//                 backgroundColor: "#747164",
+//               }}>
+//               <TableCell style={{ color: "white" }}>Продукт</TableCell>
+//               <TableCell style={{ color: "white" }} align="right">
+//                 Цена
+//               </TableCell>
+//               <TableCell style={{ color: "white" }} align="right">
+//                 Количество
+//               </TableCell>
+//               <TableCell style={{ color: "white" }} align="right">
+//                 Общая цена
+//               </TableCell>
+//               <TableCell style={{ color: "white" }} align="right">
+//                 Информация
+//               </TableCell>
+//             </TableRow>
+//           </TableHead>
+//           <TableBody>
+//             {cart.products.map(row => (
+
+//               <TableRow
+//                 key={row.item.id}
+//                 sx={{ "&:last-child td, &:last-child th": { border: 0 } }}>
+//                 <TableCell component="th" scope="row">
+//                   {row.item.title}
+//                 </TableCell>
+//                 <TableCell align="right">{row.item.price}</TableCell>
+
+//                 <TableCell align="right">
+//                   <IconButton
+//                     onClick={() => changeCount(row.count - 1, row.item.id)}>
+//                     <RemoveIcon />
+//                   </IconButton>
+//                   {row.count}
+//                   <IconButton
+//                     onClick={() => changeCount(row.count + 1, row.item.id)}>
+//                     <AddIcon />
+//                   </IconButton>
+//                 </TableCell>
+//                 <TableCell align="right">{row.subPrice}</TableCell>
+//                 <TableCell align="right">
+//                   <IconButton onClick={() => deleteFromCart(row.item.id)}>
+//                     <DeleteIcon />
+//                   </IconButton>
+//                   <IconButton
+//                     onClick={() => navigate(`/details/${row.item.id}`)}>
+//                     <InfoIcon />
+//                   </IconButton>
+//                 </TableCell>
+//               </TableRow>
+//             ))}
+//           </TableBody>
+//         </Table>
+//       </TableContainer>
+//       <Box>
+//         <Typography variant="h4" style={{ color: "white" }}>
+//           Итоговая цена: {cart.totalPrice} сом
+//         </Typography>
+//       </Box>
+//     </Container>
+//       <div>
+//         <div className="card-info">
+//           <img className="card-img" src="" alt="" />
+
+//           {/* <IconButton onClick={() => changeCount(row.count - 1, row.item.id)}>
+//             <RemoveIcon />
+//           </IconButton>
+//           {row.count}
+//           <IconButton onClick={() => changeCount(row.count + 1, row.item.id)}>
+//             <AddIcon />
+//           </IconButton> */}
+//         </div>
+//       </div>
 //       <Container>
 //         <TableContainer component={Paper}>
 //           <Table sx={{ minWidth: 650 }} aria-label="simple table">
@@ -83,7 +169,6 @@
 //                     {row.item.title}
 //                   </TableCell>
 //                   <TableCell align="right">{row.item.price}</TableCell>
-
 //                   <TableCell align="right">
 //                     <IconButton
 //                       onClick={() => changeCount(row.count - 1, row.item.id)}>
