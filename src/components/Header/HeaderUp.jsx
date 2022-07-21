@@ -19,7 +19,7 @@ const HeaderUp = () => {
       <div className="container">
         <div className="header__content">
           <div className="header__up">
-            <p>Ваш город: Бишкек</p>
+            <p>Бишкек</p>
             <div className="header__socials">
               <img src={Whats} alt="whatsapp" />
               <img src={Tg} alt="telegram" />

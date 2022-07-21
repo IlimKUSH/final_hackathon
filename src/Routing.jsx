@@ -75,6 +75,7 @@ const Routing = () => {
       />
       <Route path="/edit/:id" element={<Edit />} />
       <Route path="/products/:id" element={<Details />} />
+      <Route path="/favorites" element={<Favorites />} />
     </Routes>
   );
 };
