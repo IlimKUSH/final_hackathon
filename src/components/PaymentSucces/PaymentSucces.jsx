@@ -9,7 +9,7 @@ const PaymentSucces = () => {
   return (
     <div>
       <HeaderDown />
-      <div className="contain">
+      <div className="container">
         <h1 className="h-1">Ваш заказ оформлен!</h1>
         <div className="thanks">
           <div id="txt-1">БЛАГОДАРИМ ЗА ЗАКАЗ!</div>
@@ -18,7 +18,7 @@ const PaymentSucces = () => {
             <br /> Начинаем собирать! <br /> Наш специалист скоро с вами
             свяжется
           </div>
-          <a id="thnx-back" onClick={() => navigate("/catalog")}>
+          <a id="thnx-back" onClick={() => navigate("/products")}>
             вернуться к каталогу
           </a>
         </div>

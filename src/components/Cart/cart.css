@@ -1,3 +1,35 @@
 .bread {
   display: flex;
 }
+.cart {
+  display: flex;
+  justify-content: space-between;
+}
+.buy_in_cart {
+  width: 352px;
+  margin-top: 5px;
+}
+.product_in_cart {
+  margin-top: 5px;
+  border: solid 2 px, white;
+  display: flex;
+  justify-content: space-between;
+}
+.card_in_cart {
+  align-items: center;
+  display: flex;
+  border: solid 2 px, white;
+  margin: 5px;
+  box-shadow: 0px 4px 15px 1px rgba(255, 255, 255, 0.24);
+  border-radius: 15px;
+  padding: 30px;
+}
+.cart_img {
+  width: 182px;
+  height: 247px;
+}
+.total_price {
+  box-shadow: 0px 4px 15px 1px rgba(255, 255, 255, 0.24);
+  border-radius: 15px;
+  padding: 10px;
+}
