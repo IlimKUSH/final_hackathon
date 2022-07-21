@@ -35,7 +35,7 @@ const About = () => {
                 fill="#414141"
               />
             </svg>
-            <p>About us</p>
+            <p>О нас</p>
           </div>
           <h2 style={{ textAlign: "center", fontSize: "36px", color: "white" }}>
             Мы

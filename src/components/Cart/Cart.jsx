@@ -37,6 +37,26 @@ export default function Cart() {
         </Link>
       </div>
       <div style={{ height: "vh" }}></div>
+
+      <div>
+        <div className="card-info">
+          <img className="card-img" src="" alt="" />
+
+          {/* <IconButton onClick={() => changeCount(row.count - 1, row.item.id)}>
+            <RemoveIcon />
+          </IconButton>
+          {row.count}
+          <IconButton onClick={() => changeCount(row.count + 1, row.item.id)}>
+            <AddIcon />
+          </IconButton> */}
+        </div>
+      </div>
+
+      <Container>
+        <TableContainer component={Paper}>
+          <Table sx={{ minWidth: 650 }} aria-label="simple table">
+            <TableHead>
+
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead>
@@ -61,6 +81,7 @@ export default function Cart() {
           </TableHead>
           <TableBody>
             {cart.products.map(row => (
+
               <TableRow
                 key={row.item.id}
                 sx={{ "&:last-child td, &:last-child th": { border: 0 } }}>

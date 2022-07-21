@@ -26,7 +26,7 @@ const Delivery = () => {
                 fill="#414141"
               />
             </svg>
-            <p>Delivery</p>
+            <p>Доставка</p>
           </div>
           <div className="contain-1001">
             <h2>Доставка</h2>
