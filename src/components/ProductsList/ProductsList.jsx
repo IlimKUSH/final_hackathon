@@ -1,6 +1,6 @@
 import { Pagination } from "@mui/material";
 import React, { useContext, useEffect, useState } from "react";
-import { useSearchParams } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { productsContext } from "../../contexts/productsContext";
 import HeaderDown from "../Header/HeaderDown";
 import ProductsCard from "../ProductsCard/ProductsCard";
@@ -34,6 +34,15 @@ const ProductsList = () => {
   return (
     <div className="container">
       <HeaderDown />
+
+      <div style={{ display: "flex" }}>
+        <Link to={"/"}>
+          <p>главная</p>
+        </Link>
+        <p>/</p>
+        <p>каталог</p>
+      </div>
+
       {/* <img src={Search} alt="search" /> */}
       <input
         value={search}
@@ -41,6 +50,7 @@ const ProductsList = () => {
         placeholder="Поиск"
         type="text"
       />
+
       <div style={{ display: "flex", flexWrap: "wrap" }}>
         {products.map(item => (
           <ProductsCard key={item.id} item={item} />
