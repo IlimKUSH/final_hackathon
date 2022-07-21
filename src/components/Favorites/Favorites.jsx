@@ -38,15 +38,19 @@ const Favorites = () => {
           <FavoritesCard key={item.id} item={item} />
         ))}
       </div>
-      <div display={"flex"} justifyContent={"center"}></div>
+     
       <div display={"flex"} justifyContent={"center"}>
-        <Pagination
-          page={currentPage}
-          onChange={(e, page) => setCurrentPage(page)}
-          count={favoritesPages}
-          variant={"outlined"}
-          color="primary"
-        />
+
+        <div display={"flex"} justifyContent={"center"}>
+          <Pagination
+            page={currentPage}
+            onChange={(e, page) => setCurrentPage(page)}
+            count={favoritesPages}
+            variant={"outlined"}
+            color="primary"
+          />
+        </div>
+
       </div>
     </div>
   );
