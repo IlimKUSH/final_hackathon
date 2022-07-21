@@ -37,20 +37,16 @@ const Favorites = () => {
         ))}
       </div>
       <div display={"flex"} justifyContent={"center"}>
-      </Box>
-      <Box display={"flex"} justifyContent={"center"}>
-
-        <Pagination
-          page={currentPage}
-          onChange={(e, page) => setCurrentPage(page)}
-          count={favoritesPages}
-          variant={"outlined"}
-          color="primary"
-        />
-
+        <div display={"flex"} justifyContent={"center"}>
+          <Pagination
+            page={currentPage}
+            onChange={(e, page) => setCurrentPage(page)}
+            count={favoritesPages}
+            variant={"outlined"}
+            color="primary"
+          />
+        </div>
       </div>
-    </div>
-      </Box>
     </div>
   );
 };
